@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es" id="exe-page-py-08">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="eXeLearning v4.0.2">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S8 · Reto final | Programa en serio: de los bloques al texto con Python</title>
+<link rel="icon" type="image/x-icon" href="../libs/favicon.ico">
+<meta name="description" content="Unidad de introduccion a la programacion textual con Python para 3.o de ESO (Computacion y Robotica). SdA «Programa en serio: de los bloques al texto con Python».">
+<script>document.querySelector("html").classList.add("js");</script><script src="../libs/jquery/jquery.min.js"> </script><script src="../libs/common_i18n.js"> </script><script src="../libs/common.js"> </script><script src="../libs/exe_export.js"> </script><script>window.exeXapi={"odeId":"20260710120000PY3SDA00","packageTitle":"Programa en serio: de los bloques al texto con Python","language":"es"};</script><script src="../libs/xapi/exe_xapi.js"> </script><script src="../libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+<script src="../idevices/text/text.js"></script><link rel="stylesheet" href="../idevices/text/text.css">
+<link rel="stylesheet" href="../content/css/base.css"><script src="../theme/style.js"> </script><link rel="stylesheet" href="../theme/style.css"><link rel="stylesheet" href="../theme/zzz-majuelo.css">
+</head>
+<body class="exe-export exe-web-site">
+<script>document.body.className+=" js"</script>
+<div class="exe-content exe-export pre-js siteNav-hidden"><a href="#page-py-08" id="skipNav">Skip to content</a> <nav id="siteNav">
+<ul>
+<li> <a href="../index.html" class="main-node no-ch">Python · Inicio</a>
+</li>
+<li> <a href="../html/s1-de-los-bloques-al-texto.html" class="no-ch">S1 · De los bloques al texto</a>
+</li>
+<li> <a href="../html/s2-datos-operaciones-y-variables.html" class="no-ch">S2 · Datos, operaciones y variables</a>
+</li>
+<li> <a href="../html/s3-entrada-y-salida.html" class="no-ch">S3 · Entrada y salida</a>
+</li>
+<li> <a href="../html/s4-condicionales.html" class="no-ch">S4 · Condicionales</a>
+</li>
+<li> <a href="../html/s5-bucles-for.html" class="no-ch">S5 · Bucles for</a>
+</li>
+<li> <a href="../html/s6-while-y-anidamiento.html" class="no-ch">S6 · While y anidamiento</a>
+</li>
+<li> <a href="../html/s7-funciones-y-cadenas.html" class="no-ch">S7 · Funciones y cadenas</a>
+</li>
+<li class="active"> <a href="../html/s8-reto-final.html" class="active no-ch">S8 · Reto final</a>
+</li>
+<li> <a href="../html/chuleta-de-python.html" class="no-ch">Chuleta de Python</a>
+</li>
+</ul>
+</nav><main id="page-py-08" class="page"> 
+<header class="main-header"> <p class="page-counter"> <span class="page-counter-label">Página </span><span class="page-counter-content"> <strong class="page-counter-current-page">9</strong><span class="page-counter-sep">/</span><strong class="page-counter-total">10</strong></span></p>
+
+<div class="package-header"><p class="package-title">Programa en serio: de los bloques al texto con Python</p></div>
+<div class="page-header"><h1 class="page-title">S8 · Reto final</h1></div>
+</header><div id="page-content-page-py-08" class="page-content">
+<article id="block-py-08" class="box no-header">
+<header class="box-head no-icon">
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idev-py-08" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json" data-idevice-json-data="{&quot;ideviceId&quot;:&quot;idev-py-08&quot;}">
+
+<div class="bloque bloque-teoria">
+  <p class="bloque-titulo">Tu programa final</p>
+  <p>Ha llegado el momento de juntar todo lo aprendido en un <strong>programa tuyo</strong>. Vas a elegir <strong>una</strong> de las cuatro misiones de abajo y programarla en <a href="https://www.online-python.com/" target="_blank" rel="noopener">online-python.com</a>. Cada misión te dice <strong>exactamente qué hacer, paso a paso</strong>, así que no te vas a perder.</p>
+</div>
+
+<h2>Cómo trabajar el reto (4 pasos)</h2>
+<div class="bloque bloque-nota">
+  <ol>
+    <li><strong>Elige</strong> una misión (la que más te guste). Solo una.</li>
+    <li><strong>Planifica</strong>: lee sus pasos y piensa qué variables y qué estructuras (<code>if</code>, <code>while</code>…) vas a necesitar.</li>
+    <li><strong>Programa poco a poco</strong>: escribe unas líneas, pulsa «Run», comprueba que funcionan, y sigue. No lo escribas todo de golpe.</li>
+    <li><strong>Prueba y entrega</strong>: pruébalo de principio a fin, descárgalo como <code>reto_final.py</code> y súbelo a Google Classroom.</li>
+  </ol>
+</div>
+
+<h2>Elige tu misión</h2>
+
+<div class="bloque bloque-resuelto">
+  <p class="bloque-titulo">Misión 1 · El chatbot parlanchín</p>
+  <p><strong>Qué hace:</strong> un programa que conversa contigo. Se presenta, te hace varias preguntas y al final te devuelve un resumen con tus respuestas.</p>
+  <p><strong>Pasos:</strong></p>
+  <ol>
+    <li>Haz que el programa <strong>salude y se presente</strong> con <code>print()</code>.</li>
+    <li>Hazle <strong>al menos 3 preguntas</strong> con <code>input()</code> (por ejemplo: nombre, edad, color favorito). <strong>Guarda cada respuesta en una variable distinta</strong> (<code>nombre</code>, <code>edad</code>, <code>color</code>…).</li>
+    <li>Al final, muestra un <strong>resumen</strong> que use todas las variables, uniendo textos con <code>+</code>.</li>
+  </ol>
+  <p><strong>Ejemplo de cómo debería terminar:</strong></p>
+  <pre><code>nombre = input(&quot;¿Cómo te llamas? &quot;)
+edad = input(&quot;¿Cuántos años tienes? &quot;)
+print(&quot;Vale, te llamas &quot; + nombre + &quot; y tienes &quot; + edad + &quot; años. ¡Entendido!&quot;)</code></pre>
+  <p><strong>Amplía (Nivel Pro):</strong> añade más preguntas y un mensaje final con más personalidad.</p>
+</div>
+
+<div class="bloque bloque-resuelto">
+  <p class="bloque-titulo">Misión 2 · Aventura en el castillo</p>
+  <p><strong>Qué hace:</strong> una historia interactiva donde el jugador toma decisiones y, según lo que elija, la historia va por un camino u otro.</p>
+  <p><strong>Pasos:</strong></p>
+  <ol>
+    <li>Inventa una pequeña <strong>historia</strong> (un bosque, una casa encantada, el espacio…) y preséntala con <code>print()</code>.</li>
+    <li>Plantea una <strong>primera decisión</strong> con al menos 2 opciones y pídela con <code>input()</code> (por ejemplo: «¿izquierda o derecha?»).</li>
+    <li>Usa <code>if</code>, <code>elif</code> y <code>else</code> para que <strong>cada opción lleve a un final diferente</strong>.</li>
+    <li>Usa <code>.lower()</code> sobre la respuesta para que dé igual si el jugador escribe en mayúsculas o minúsculas.</li>
+  </ol>
+  <p><strong>Ejemplo del esqueleto:</strong></p>
+  <pre><code>print(&quot;Estás ante dos puertas.&quot;)
+puerta = input(&quot;¿Eliges la ROJA o la AZUL? &quot;).lower()
+if puerta == &quot;roja&quot;:
+    print(&quot;¡Fuego! Vuelve a intentarlo.&quot;)
+elif puerta == &quot;azul&quot;:
+    print(&quot;Encuentras un tesoro. ¡Ganas!&quot;)
+else:
+    print(&quot;Esa puerta no existe...&quot;)</code></pre>
+  <p><strong>Amplía (Nivel Pro):</strong> anida una decisión: si el jugador elige un camino, hazle <em>otra</em> pregunta dentro de ese <code>if</code>.</p>
+</div>
+
+<div class="bloque bloque-resuelto">
+  <p class="bloque-titulo">Misión 3 · Adivina el número secreto</p>
+  <p><strong>Qué hace:</strong> el ordenador piensa un número y tú tienes que adivinarlo; el programa te dice si te pasas o te quedas corto, hasta que aciertas.</p>
+  <p><strong>Pasos:</strong></p>
+  <ol>
+    <li><code>import random</code> y genera un número secreto del 1 al 50 con <code>random.randint(1, 50)</code>. Guárdalo en una variable.</li>
+    <li>Abre un bucle <code>while True:</code>.</li>
+    <li>Dentro: pide un número con <code>input()</code> y conviértelo con <code>int()</code>.</li>
+    <li>Compara con <code>if</code>/<code>elif</code>/<code>else</code>: si es menor, «demasiado bajo»; si es mayor, «demasiado alto»; si acierta, felicítalo y usa <code>break</code> para salir.</li>
+  </ol>
+  <p><strong>Amplía (Nivel Pro):</strong> crea una variable <code>intentos = 0</code> antes del bucle, súmale 1 en cada vuelta y, al acertar, muestra cuántos intentos ha necesitado.</p>
+</div>
+
+<div class="bloque bloque-resuelto">
+  <p class="bloque-titulo">Misión 4 · Piedra, papel, tijera contra la IA</p>
+  <p><strong>Qué hace:</strong> juegas contra el ordenador, que elige su jugada al azar; el programa decide quién gana.</p>
+  <p><strong>Pasos:</strong></p>
+  <ol>
+    <li><code>import random</code> y crea una <strong>lista</strong> con las opciones: <code>opciones = ["piedra", "papel", "tijera"]</code>.</li>
+    <li>Pide la jugada del jugador con <code>input()</code> y usa <code>.lower()</code>.</li>
+    <li>Haz que el ordenador elija con <code>random.choice(opciones)</code>.</li>
+    <li>Muestra las dos jugadas y decide el ganador con <code>if</code>/<code>elif</code>/<code>else</code>. Para saber cuándo ganas, combina condiciones con <code>and</code> y <code>or</code>.</li>
+  </ol>
+  <p><strong>Pista para el empate y la victoria:</strong></p>
+  <pre><code>if jugador == cpu:
+    print(&quot;¡Empate!&quot;)
+elif (jugador == &quot;piedra&quot; and cpu == &quot;tijera&quot;) or \
+     (jugador == &quot;papel&quot; and cpu == &quot;piedra&quot;) or \
+     (jugador == &quot;tijera&quot; and cpu == &quot;papel&quot;):
+    print(&quot;¡Ganas tú!&quot;)
+else:
+    print(&quot;¡Gana la máquina!&quot;)</code></pre>
+  <p><strong>Amplía (Nivel Pro):</strong> mete el juego en un <code>while True</code> con un marcador de puntos y pregunta al final de cada ronda si quiere «jugar otra vez».</p>
+</div>
+
+<h2>Qué se valora (niveles de logro)</h2>
+<table class="tabla-datos">
+  <thead><tr><th>Nivel</th><th>Tu programa…</th></tr></thead>
+  <tbody>
+    <tr><td>Mínimo</td><td>Funciona sin errores y cumple los pasos básicos de la misión (usa variables, entrada/salida y al menos una estructura de control).</td></tr>
+    <tr><td>Bien</td><td>Además, combina condicionales y bucles, y tiene comentarios que explican el código.</td></tr>
+    <tr><td>Excelente</td><td>Añade la <strong>ampliación (Nivel Pro)</strong> y el código está ordenado y con nombres claros.</td></tr>
+  </tbody>
+</table>
+
+<div class="bloque bloque-actividad">
+  <p class="bloque-titulo">Entrega del reto final</p>
+  <ol>
+    <li>Empieza tu programa con un <strong>comentario</strong> que diga qué misión has elegido y qué hace.</li>
+    <li>Pruébalo bien: que funcione de principio a fin.</li>
+    <li>Descarga el archivo como <code>reto_final.py</code> y súbelo a la tarea de Google Classroom.</li>
+  </ol>
+</div>
+
+</div>
+</div>
+</article>
+</div></main><div class="nav-buttons">
+<a href="../html/s7-funciones-y-cadenas.html" title="Anterior" class="nav-button nav-button-left"><span>Anterior</span></a>
+<a href="../html/chuleta-de-python.html" title="Siguiente" class="nav-button nav-button-right"><span>Siguiente</span></a>
+</div>
+<footer id="siteFooter"><div id="siteFooterContent"> <div id="packageLicense" class=""> <p> <span class="license-label">Licencia: </span><span class="license">creative commons: attribution - share alike</span></p>
+</div>
+</div></footer>
+</div>
+<p id="made-with-eXe"> <a href="https://exelearning.net/" target="_blank" rel="noopener"> <span>Creado con eXeLearning <span>(Ventana nueva)</span></span></a></p>
+</body>
+</html>

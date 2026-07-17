@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es" id="exe-page-py-09">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="eXeLearning v4.0.2">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chuleta de Python | Programa en serio: de los bloques al texto con Python</title>
+<link rel="icon" type="image/x-icon" href="../libs/favicon.ico">
+<meta name="description" content="Unidad de introduccion a la programacion textual con Python para 3.o de ESO (Computacion y Robotica). SdA «Programa en serio: de los bloques al texto con Python».">
+<script>document.querySelector("html").classList.add("js");</script><script src="../libs/jquery/jquery.min.js"> </script><script src="../libs/common_i18n.js"> </script><script src="../libs/common.js"> </script><script src="../libs/exe_export.js"> </script><script>window.exeXapi={"odeId":"20260710120000PY3SDA00","packageTitle":"Programa en serio: de los bloques al texto con Python","language":"es"};</script><script src="../libs/xapi/exe_xapi.js"> </script><script src="../libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+<script src="../idevices/text/text.js"></script><link rel="stylesheet" href="../idevices/text/text.css">
+<link rel="stylesheet" href="../content/css/base.css"><script src="../theme/style.js"> </script><link rel="stylesheet" href="../theme/style.css"><link rel="stylesheet" href="../theme/zzz-majuelo.css">
+</head>
+<body class="exe-export exe-web-site">
+<script>document.body.className+=" js"</script>
+<div class="exe-content exe-export pre-js siteNav-hidden"><a href="#page-py-09" id="skipNav">Skip to content</a> <nav id="siteNav">
+<ul>
+<li> <a href="../index.html" class="main-node no-ch">Python · Inicio</a>
+</li>
+<li> <a href="../html/s1-de-los-bloques-al-texto.html" class="no-ch">S1 · De los bloques al texto</a>
+</li>
+<li> <a href="../html/s2-datos-operaciones-y-variables.html" class="no-ch">S2 · Datos, operaciones y variables</a>
+</li>
+<li> <a href="../html/s3-entrada-y-salida.html" class="no-ch">S3 · Entrada y salida</a>
+</li>
+<li> <a href="../html/s4-condicionales.html" class="no-ch">S4 · Condicionales</a>
+</li>
+<li> <a href="../html/s5-bucles-for.html" class="no-ch">S5 · Bucles for</a>
+</li>
+<li> <a href="../html/s6-while-y-anidamiento.html" class="no-ch">S6 · While y anidamiento</a>
+</li>
+<li> <a href="../html/s7-funciones-y-cadenas.html" class="no-ch">S7 · Funciones y cadenas</a>
+</li>
+<li> <a href="../html/s8-reto-final.html" class="no-ch">S8 · Reto final</a>
+</li>
+<li class="active"> <a href="../html/chuleta-de-python.html" class="active no-ch">Chuleta de Python</a>
+</li>
+</ul>
+</nav><main id="page-py-09" class="page"> 
+<header class="main-header"> <p class="page-counter"> <span class="page-counter-label">Página </span><span class="page-counter-content"> <strong class="page-counter-current-page">10</strong><span class="page-counter-sep">/</span><strong class="page-counter-total">10</strong></span></p>
+
+<div class="package-header"><p class="package-title">Programa en serio: de los bloques al texto con Python</p></div>
+<div class="page-header"><h1 class="page-title">Chuleta de Python</h1></div>
+</header><div id="page-content-page-py-09" class="page-content">
+<article id="block-py-09" class="box no-header">
+<header class="box-head no-icon">
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idev-py-09" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json" data-idevice-json-data="{&quot;ideviceId&quot;:&quot;idev-py-09&quot;}">
+
+<div class="bloque bloque-teoria">
+  <p class="bloque-titulo">Chuleta de Python</p>
+  <p>Un resumen para tenerlo todo a mano mientras programas y para repasar antes del cuestionario.</p>
+</div>
+
+<h2>Mostrar y pedir</h2>
+<pre><code>print(&quot;Hola&quot;)                 # mostrar
+nombre = input(&quot;Nombre: &quot;)    # pedir texto
+edad = int(input(&quot;Edad: &quot;))   # pedir un número entero</code></pre>
+
+<h2>Variables y números</h2>
+<pre><code>puntos = 0
+pi = 3.14
+puntos = puntos + 10</code></pre>
+<table class="tabla-datos">
+  <thead><tr><th>Operador</th><th>Hace</th></tr></thead>
+  <tbody>
+    <tr><td><code>+ - * /</code></td><td>suma, resta, multiplica, divide</td></tr>
+    <tr><td><code>//</code></td><td>división entera</td></tr>
+    <tr><td><code>%</code></td><td>resto de la división</td></tr>
+    <tr><td><code>**</code></td><td>potencia (elevado a)</td></tr>
+  </tbody>
+</table>
+
+<h2>Comparar</h2>
+<p><code>==</code> igual · <code>!=</code> distinto · <code>&gt;</code> mayor · <code>&lt;</code> menor · <code>&gt;=</code> mayor o igual · <code>&lt;=</code> menor o igual. Se combinan con <code>and</code>, <code>or</code>, <code>not</code>.</p>
+
+<h2>Decidir</h2>
+<pre><code>if nota &gt;= 5:
+    print(&quot;Aprobado&quot;)
+elif nota &gt;= 4:
+    print(&quot;Casi&quot;)
+else:
+    print(&quot;A repasar&quot;)</code></pre>
+
+<h2>Repetir</h2>
+<pre><code>for i in range(5):        # 0,1,2,3,4
+    print(i)
+
+numero = 1
+while numero &lt;= 5:
+    print(numero)
+    numero = numero + 1</code></pre>
+
+<h2>Funciones y cadenas</h2>
+<pre><code>def doble(n):
+    return n * 2
+
+print(doble(4))          # 8
+
+texto = &quot;Hola&quot;
+print(len(texto))        # 4
+print(texto.lower())     # hola</code></pre>
+
+<div class="bloque bloque-nota">
+  <p class="bloque-titulo">Errores típicos que evitar</p>
+  <ul>
+    <li>Olvidar los <strong>dos puntos <code>:</code></strong> al final de <code>if</code>, <code>for</code>, <code>while</code> o <code>def</code>.</li>
+    <li>Olvidar la <strong>sangría</strong> de lo que va dentro.</li>
+    <li>Comparar con un solo <code>=</code> (se compara con <code>==</code>; un solo <code>=</code> es para guardar).</li>
+    <li>Operar con lo que devuelve <code>input()</code> sin convertirlo con <code>int()</code> o <code>float()</code>.</li>
+  </ul>
+</div>
+
+</div>
+</div>
+</article>
+</div></main><div class="nav-buttons">
+<a href="../html/s8-reto-final.html" title="Anterior" class="nav-button nav-button-left"><span>Anterior</span></a>
+<span class="nav-button nav-button-right" aria-hidden="true"><span>Siguiente</span></span>
+</div>
+<footer id="siteFooter"><div id="siteFooterContent"> <div id="packageLicense" class=""> <p> <span class="license-label">Licencia: </span><span class="license">creative commons: attribution - share alike</span></p>
+</div>
+</div></footer>
+</div>
+<p id="made-with-eXe"> <a href="https://exelearning.net/" target="_blank" rel="noopener"> <span>Creado con eXeLearning <span>(Ventana nueva)</span></span></a></p>
+</body>
+</html>

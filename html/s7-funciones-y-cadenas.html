@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es" id="exe-page-py-07">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="eXeLearning v4.0.2">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S7 · Funciones y cadenas | Programa en serio: de los bloques al texto con Python</title>
+<link rel="icon" type="image/x-icon" href="../libs/favicon.ico">
+<meta name="description" content="Unidad de introduccion a la programacion textual con Python para 3.o de ESO (Computacion y Robotica). SdA «Programa en serio: de los bloques al texto con Python».">
+<script>document.querySelector("html").classList.add("js");</script><script src="../libs/jquery/jquery.min.js"> </script><script src="../libs/common_i18n.js"> </script><script src="../libs/common.js"> </script><script src="../libs/exe_export.js"> </script><script>window.exeXapi={"odeId":"20260710120000PY3SDA00","packageTitle":"Programa en serio: de los bloques al texto con Python","language":"es"};</script><script src="../libs/xapi/exe_xapi.js"> </script><script src="../libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+<script src="../idevices/text/text.js"></script><link rel="stylesheet" href="../idevices/text/text.css">
+<link rel="stylesheet" href="../content/css/base.css"><script src="../theme/style.js"> </script><link rel="stylesheet" href="../theme/style.css"><link rel="stylesheet" href="../theme/zzz-majuelo.css">
+</head>
+<body class="exe-export exe-web-site">
+<script>document.body.className+=" js"</script>
+<div class="exe-content exe-export pre-js siteNav-hidden"><a href="#page-py-07" id="skipNav">Skip to content</a> <nav id="siteNav">
+<ul>
+<li> <a href="../index.html" class="main-node no-ch">Python · Inicio</a>
+</li>
+<li> <a href="../html/s1-de-los-bloques-al-texto.html" class="no-ch">S1 · De los bloques al texto</a>
+</li>
+<li> <a href="../html/s2-datos-operaciones-y-variables.html" class="no-ch">S2 · Datos, operaciones y variables</a>
+</li>
+<li> <a href="../html/s3-entrada-y-salida.html" class="no-ch">S3 · Entrada y salida</a>
+</li>
+<li> <a href="../html/s4-condicionales.html" class="no-ch">S4 · Condicionales</a>
+</li>
+<li> <a href="../html/s5-bucles-for.html" class="no-ch">S5 · Bucles for</a>
+</li>
+<li> <a href="../html/s6-while-y-anidamiento.html" class="no-ch">S6 · While y anidamiento</a>
+</li>
+<li class="active"> <a href="../html/s7-funciones-y-cadenas.html" class="active no-ch">S7 · Funciones y cadenas</a>
+</li>
+<li> <a href="../html/s8-reto-final.html" class="no-ch">S8 · Reto final</a>
+</li>
+<li> <a href="../html/chuleta-de-python.html" class="no-ch">Chuleta de Python</a>
+</li>
+</ul>
+</nav><main id="page-py-07" class="page"> 
+<header class="main-header"> <p class="page-counter"> <span class="page-counter-label">Página </span><span class="page-counter-content"> <strong class="page-counter-current-page">8</strong><span class="page-counter-sep">/</span><strong class="page-counter-total">10</strong></span></p>
+
+<div class="package-header"><p class="package-title">Programa en serio: de los bloques al texto con Python</p></div>
+<div class="page-header"><h1 class="page-title">S7 · Funciones y cadenas</h1></div>
+</header><div id="page-content-page-py-07" class="page-content">
+<article id="block-py-07" class="box no-header">
+<header class="box-head no-icon">
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idev-py-07" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json" data-idevice-json-data="{&quot;ideviceId&quot;:&quot;idev-py-07&quot;}">
+
+<div class="bloque bloque-teoria">
+  <p class="bloque-titulo">Ordenar el código y trabajar con textos</p>
+  <p>En bloques podías crear tus propios «bloques nuevos». En Python eso son las <strong>funciones</strong>: trozos de código con nombre que puedes reutilizar. Además, en esta sesión aprenderás a manejar <strong>cadenas de texto</strong>.</p>
+</div>
+
+<h2>Funciones propias: <code>def</code></h2>
+<p>Una función se define con <code>def</code>, un nombre y unos paréntesis. Dentro puede recibir <strong>datos de entrada</strong> (parámetros) y devolver un <strong>resultado</strong> con <code>return</code>:</p>
+<pre><code>def saludar(nombre):
+    print(&quot;¡Hola,&quot;, nombre, &quot;!&quot;)
+
+saludar(&quot;Ana&quot;)      # llamamos a la función
+saludar(&quot;Carlos&quot;)</code></pre>
+<pre><code>def area_rectangulo(base, altura):
+    return base * altura
+
+resultado = area_rectangulo(4, 5)
+print(&quot;El área es&quot;, resultado)</code></pre>
+<div class="bloque bloque-nota">
+  <p class="bloque-titulo">¿Por qué usar funciones?</p>
+  <p>Para no repetir código: escribes la función una vez y la <strong>usas muchas veces</strong>. Tu programa queda más corto, más claro y más fácil de corregir.</p>
+</div>
+
+<h2>Cadenas de texto</h2>
+<p>Una <strong>cadena</strong> es un texto entre comillas. Puedes unirlas con <code>+</code>, medir su longitud con <code>len()</code> y usar métodos útiles:</p>
+<pre><code>frase = &quot;Hola Mundo&quot;
+print(len(frase))          # 10  (número de caracteres)
+print(frase.upper())       # HOLA MUNDO
+print(frase.lower())       # hola mundo</code></pre>
+<p>El método <code>.lower()</code> es muy práctico para comparar respuestas del usuario sin preocuparte por mayúsculas:</p>
+<pre><code>respuesta = input(&quot;¿Continuar? (sí/no): &quot;)
+if respuesta.lower() == &quot;si&quot;:
+    print(&quot;Seguimos&quot;)</code></pre>
+<p>También puedes recorrer una cadena letra a letra con un <code>for</code>, y comprobar si una letra está dentro con <code>in</code>:</p>
+<pre><code>for letra in &quot;cielo&quot;:
+    if letra in &quot;aeiou&quot;:
+        print(letra, &quot;es vocal&quot;)</code></pre>
+
+<div class="bloque bloque-actividad">
+  <p class="bloque-titulo">Tarea 9 · Funciones</p>
+  <p>Un archivo por apartado:</p>
+  <ol>
+    <li>Crea una función <code>es_par(numero)</code> que devuelva <code>True</code> si el número es par y <code>False</code> si no. Pruébala con varios números.</li>
+    <li>Crea una función <code>media(a, b, c)</code> que devuelva la media de tres números. Muestra el resultado.</li>
+  </ol>
+  <p>Entrega como <code>tarea9.zip</code> en Google Classroom.</p>
+</div>
+
+<div class="bloque bloque-actividad">
+  <p class="bloque-titulo">Tarea 10 · Cadenas de texto</p>
+  <p>Un archivo por apartado:</p>
+  <ol>
+    <li>Pide una palabra y muestra <strong>cuántas letras</strong> tiene y la palabra en <strong>mayúsculas</strong>.</li>
+    <li>Pide una frase y cuenta <strong>cuántas vocales</strong> tiene (recorre la frase con un <code>for</code> y usa <code>in</code>).</li>
+  </ol>
+  <p><strong>Amplía (opcional):</strong> muestra la frase escrita al revés.</p>
+  <p>Entrega como <code>tarea10.zip</code> en Google Classroom.</p>
+</div>
+
+</div>
+</div>
+</article>
+</div></main><div class="nav-buttons">
+<a href="../html/s6-while-y-anidamiento.html" title="Anterior" class="nav-button nav-button-left"><span>Anterior</span></a>
+<a href="../html/s8-reto-final.html" title="Siguiente" class="nav-button nav-button-right"><span>Siguiente</span></a>
+</div>
+<footer id="siteFooter"><div id="siteFooterContent"> <div id="packageLicense" class=""> <p> <span class="license-label">Licencia: </span><span class="license">creative commons: attribution - share alike</span></p>
+</div>
+</div></footer>
+</div>
+<p id="made-with-eXe"> <a href="https://exelearning.net/" target="_blank" rel="noopener"> <span>Creado con eXeLearning <span>(Ventana nueva)</span></span></a></p>
+</body>
+</html>

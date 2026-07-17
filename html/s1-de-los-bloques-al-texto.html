@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es" id="exe-page-py-01">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="eXeLearning v4.0.2">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S1 · De los bloques al texto | Programa en serio: de los bloques al texto con Python</title>
+<link rel="icon" type="image/x-icon" href="../libs/favicon.ico">
+<meta name="description" content="Unidad de introduccion a la programacion textual con Python para 3.o de ESO (Computacion y Robotica). SdA «Programa en serio: de los bloques al texto con Python».">
+<script>document.querySelector("html").classList.add("js");</script><script src="../libs/jquery/jquery.min.js"> </script><script src="../libs/common_i18n.js"> </script><script src="../libs/common.js"> </script><script src="../libs/exe_export.js"> </script><script>window.exeXapi={"odeId":"20260710120000PY3SDA00","packageTitle":"Programa en serio: de los bloques al texto con Python","language":"es"};</script><script src="../libs/xapi/exe_xapi.js"> </script><script src="../libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+<script src="../idevices/text/text.js"></script><link rel="stylesheet" href="../idevices/text/text.css">
+<script src="../idevices/relate/relate.js"></script><link rel="stylesheet" href="../idevices/relate/relate.css">
+<script src="../libs/jquery-ui/jquery-ui.min.js"> </script>
+<link rel="stylesheet" href="../content/css/base.css"><script src="../theme/style.js"> </script><link rel="stylesheet" href="../theme/style.css"><link rel="stylesheet" href="../theme/zzz-majuelo.css">
+</head>
+<body class="exe-export exe-web-site">
+<script>document.body.className+=" js"</script>
+<div class="exe-content exe-export pre-js siteNav-hidden"><a href="#page-py-01" id="skipNav">Skip to content</a> <nav id="siteNav">
+<ul>
+<li> <a href="../index.html" class="main-node no-ch">Python · Inicio</a>
+</li>
+<li class="active"> <a href="../html/s1-de-los-bloques-al-texto.html" class="active no-ch">S1 · De los bloques al texto</a>
+</li>
+<li> <a href="../html/s2-datos-operaciones-y-variables.html" class="no-ch">S2 · Datos, operaciones y variables</a>
+</li>
+<li> <a href="../html/s3-entrada-y-salida.html" class="no-ch">S3 · Entrada y salida</a>
+</li>
+<li> <a href="../html/s4-condicionales.html" class="no-ch">S4 · Condicionales</a>
+</li>
+<li> <a href="../html/s5-bucles-for.html" class="no-ch">S5 · Bucles for</a>
+</li>
+<li> <a href="../html/s6-while-y-anidamiento.html" class="no-ch">S6 · While y anidamiento</a>
+</li>
+<li> <a href="../html/s7-funciones-y-cadenas.html" class="no-ch">S7 · Funciones y cadenas</a>
+</li>
+<li> <a href="../html/s8-reto-final.html" class="no-ch">S8 · Reto final</a>
+</li>
+<li> <a href="../html/chuleta-de-python.html" class="no-ch">Chuleta de Python</a>
+</li>
+</ul>
+</nav><main id="page-py-01" class="page"> 
+<header class="main-header"> <p class="page-counter"> <span class="page-counter-label">Página </span><span class="page-counter-content"> <strong class="page-counter-current-page">2</strong><span class="page-counter-sep">/</span><strong class="page-counter-total">10</strong></span></p>
+
+<div class="package-header"><p class="package-title">Programa en serio: de los bloques al texto con Python</p></div>
+<div class="page-header"><h1 class="page-title">S1 · De los bloques al texto</h1></div>
+</header><div id="page-content-page-py-01" class="page-content">
+<article id="block-py-01" class="box no-header">
+<header class="box-head no-icon">
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idev-py-01" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json" data-idevice-json-data="{&quot;ideviceId&quot;:&quot;idev-py-01&quot;}">
+
+<div class="bloque bloque-teoria">
+  <p class="bloque-titulo">Lo mismo que ya sabes, pero escrito</p>
+  <p>Cuando programabas con <strong>bloques</strong> (Scratch), en realidad ya estabas dando <strong>órdenes ordenadas</strong> a un ordenador: mostrar un mensaje, preguntar algo, guardar una respuesta, repetir, decidir… A esa lista de órdenes ordenadas la llamamos <strong>algoritmo</strong>.</p>
+  <p>Programar en <strong>Python</strong> es exactamente lo mismo, pero en vez de <em>arrastrar bloques</em>, <strong>escribes las órdenes con el teclado</strong>. En esta sesión vas a ver <strong>el mismo algoritmo</strong> en bloques y en Python, uno al lado del otro, para que compruebes que ya sabes más de lo que crees.</p>
+</div>
+
+<h2>El mismo algoritmo, orden a orden</h2>
+<p>Compara cada bloque de la izquierda con su línea de Python a la derecha. Fíjate: <strong>hacen lo mismo</strong>.</p>
+<table class="tabla-datos">
+  <thead><tr><th>En bloques (lo que ya sabes)</th><th>En Python (texto)</th></tr></thead>
+  <tbody>
+    <tr><td><div style="overflow-x:auto"><svg xmlns="http://www.w3.org/2000/svg" width="176" height="43" viewBox="0 0 176 43" role="img" style="vertical-align:middle"><path d="M0,6 Q0,0 6,0 H15 l3,5 h8 l3,-5 H169.64000000000001 Q175.64000000000001,0 175.64000000000001,6 V30 Q175.64000000000001,36 169.64000000000001,36 H29 l-3,5 h-8 l-3,-5 H6 Q0,36 0,30 Z" fill="#9966FF" stroke="#774DCB"/><text x="12.0" y="18.0" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="start" dominant-baseline="middle">decir</text><rect x="57.1" y="7.0" width="106.5" height="22" rx="6" fill="#fff" stroke="rgba(0,0,0,.15)"/><text x="110.4" y="18.0" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="normal" fill="#575E75" text-anchor="middle" dominant-baseline="middle">¡Hola, mundo!</text></svg></div></td><td><code>print("¡Hola, mundo!")</code></td></tr>
+    <tr><td><div style="overflow-x:auto"><svg xmlns="http://www.w3.org/2000/svg" width="319" height="43" viewBox="0 0 319 43" role="img" style="vertical-align:middle"><path d="M0,6 Q0,0 6,0 H15 l3,5 h8 l3,-5 H313.42 Q319.42,0 319.42,6 V30 Q319.42,36 313.42,36 H29 l-3,5 h-8 l-3,-5 H6 Q0,36 0,30 Z" fill="#5CB1D6" stroke="#2E8EB8"/><text x="12.0" y="18.0" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="start" dominant-baseline="middle">preguntar</text><rect x="94.6" y="7.0" width="134.1" height="22" rx="6" fill="#fff" stroke="rgba(0,0,0,.15)"/><text x="161.7" y="18.0" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="normal" fill="#575E75" text-anchor="middle" dominant-baseline="middle">¿Cómo te llamas?</text><text x="235.7" y="18.0" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="start" dominant-baseline="middle">y esperar</text></svg></div></td><td><code>nombre = input("¿Cómo te llamas? ")</code></td></tr>
+    <tr><td><div style="overflow-x:auto"><svg xmlns="http://www.w3.org/2000/svg" width="181" height="43" viewBox="0 0 181 43" role="img" style="vertical-align:middle"><path d="M0,6 Q0,0 6,0 H15 l3,5 h8 l3,-5 H174.54000000000002 Q180.54000000000002,0 180.54000000000002,6 V30 Q180.54000000000002,36 174.54000000000002,36 H29 l-3,5 h-8 l-3,-5 H6 Q0,36 0,30 Z" fill="#FF8C1A" stroke="#DB6E00"/><text x="12.0" y="18.0" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="start" dominant-baseline="middle">fijar</text><rect x="57.1" y="7.0" width="63.0" height="22" rx="11" fill="#FF8C1A" stroke="#DB6E00"/><text x="88.6" y="18.0" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle">puntos</text><text x="127.1" y="18.0" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="start" dominant-baseline="middle">a</text><rect x="142.5" y="7.0" width="26.0" height="22" rx="11" fill="#fff" stroke="rgba(0,0,0,.15)"/><text x="155.5" y="18.0" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="normal" fill="#575E75" text-anchor="middle" dominant-baseline="middle">0</text></svg></div></td><td><code>puntos = 0</code></td></tr>
+    <tr><td><div style="overflow-x:auto"><svg xmlns="http://www.w3.org/2000/svg" width="112" height="83" viewBox="0 0 112 83" role="img" style="vertical-align:middle"><path d="M0,6 Q0,0 6,0 H15 l3,5 h8 l3,-5 H105.9 Q111.9,0 111.9,6 V30 Q111.9,36 105.9,36 H44 l-3,5 h-8 l-3,-5 H21 Q15,36 15,42 V56 Q15,62 21,62 H15 l3,5 h8 l3,-5 H105.9 Q111.9,62 111.9,68 V70 Q111.9,76 105.9,76 H29 l-3,5 h-8 l-3,-5 H6 Q0,76 0,70 Z" fill="#FFAB19" stroke="#CF8B17"/><text x="12.0" y="18.0" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="start" dominant-baseline="middle">repetir</text><rect x="73.9" y="7.0" width="26.0" height="22" rx="11" fill="#fff" stroke="rgba(0,0,0,.15)"/><text x="86.9" y="18.0" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="normal" fill="#575E75" text-anchor="middle" dominant-baseline="middle">3</text></svg></div></td><td><code>for i in range(3):</code> (lo de dentro va con sangría)</td></tr>
+    <tr><td><div style="overflow-x:auto"><svg xmlns="http://www.w3.org/2000/svg" width="84" height="141" viewBox="0 0 84 141" role="img" style="vertical-align:middle"><path d="M0,6 Q0,0 6,0 H15 l3,5 h8 l3,-5 H77.9 Q83.9,0 83.9,6 V30 Q83.9,36 77.9,36 H44 l-3,5 h-8 l-3,-5 H21 Q15,36 15,42 V54 Q15,60 21,60 H15 l3,5 h8 l3,-5 H77.9 Q83.9,60 83.9,66 V90 Q83.9,96 77.9,96 H44 l-3,5 h-8 l-3,-5 H21 Q15,96 15,102 V114 Q15,120 21,120 H15 l3,5 h8 l3,-5 H77.9 Q83.9,120 83.9,126 V128 Q83.9,134 77.9,134 H29 l-3,5 h-8 l-3,-5 H6 Q0,134 0,128 Z" fill="#FFAB19" stroke="#CF8B17"/><text x="12.0" y="18.0" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="start" dominant-baseline="middle">si</text><polygon points="39.9,7.0 63.900000000000006,7.0 71.9,18.0 63.900000000000006,29.0 39.9,29.0 31.9,18.0" fill="rgba(0,0,0,.12)" stroke="rgba(0,0,0,.18)"/><text x="12.0" y="78.0" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="start" dominant-baseline="middle">si no</text></svg></div></td><td><code>if …:</code> / <code>else:</code></td></tr>
+  </tbody>
+</table>
+
+<h2>Un programa completo, lado a lado</h2>
+<p>Este pequeño programa <strong>saluda al usuario por su nombre</strong>. A la izquierda, cómo lo montarías con bloques; a la derecha, el mismo programa en Python.</p>
+<table class="tabla-datos">
+  <thead><tr><th>Con bloques (Scratch)</th><th>Con texto (Python)</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><div style="overflow-x:auto"><span style="display:inline-flex;flex-direction:column;align-items:flex-start;line-height:0"><svg xmlns="http://www.w3.org/2000/svg" width="165" height="43" viewBox="0 0 165 43" role="img" style="vertical-align:middle"><path d="M0,36 V18 C0,7 8,2 20,2 C34,2 42,9 50,12 H159.0 Q165.0,12 165.0,18 V30 Q165.0,36 159.0,36 H29 l-3,5 h-8 l-3,-5 H6 Q0,36 0,30 Z" fill="#FFBF00" stroke="#CF9E00"/><text x="12.0" y="18.0" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="start" dominant-baseline="middle">al hacer clic en</text><path d="M130.0,10.0 V26.0" stroke="#2E7D32" stroke-width="1.6" fill="none"/><path d="M130.0,10.0 q7,-4 12,0 q5,4 12,0 l0,9 q-7,4 -12,0 q-5,-4 -12,0 Z" fill="#4CAF50" stroke="#2E7D32" stroke-width="0.8"/></svg><span style="margin-top:-5px"><svg xmlns="http://www.w3.org/2000/svg" width="319" height="43" viewBox="0 0 319 43" role="img" style="vertical-align:middle"><path d="M0,6 Q0,0 6,0 H15 l3,5 h8 l3,-5 H313.42 Q319.42,0 319.42,6 V30 Q319.42,36 313.42,36 H29 l-3,5 h-8 l-3,-5 H6 Q0,36 0,30 Z" fill="#5CB1D6" stroke="#2E8EB8"/><text x="12.0" y="18.0" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="start" dominant-baseline="middle">preguntar</text><rect x="94.6" y="7.0" width="134.1" height="22" rx="6" fill="#fff" stroke="rgba(0,0,0,.15)"/><text x="161.7" y="18.0" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="normal" fill="#575E75" text-anchor="middle" dominant-baseline="middle">¿Cómo te llamas?</text><text x="235.7" y="18.0" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="start" dominant-baseline="middle">y esperar</text></svg></span><span style="margin-top:-5px"><svg xmlns="http://www.w3.org/2000/svg" width="245" height="43" viewBox="0 0 245 43" role="img" style="vertical-align:middle"><path d="M0,6 Q0,0 6,0 H15 l3,5 h8 l3,-5 H239.16000000000003 Q245.16000000000003,0 245.16000000000003,6 V30 Q245.16000000000003,36 239.16000000000003,36 H29 l-3,5 h-8 l-3,-5 H6 Q0,36 0,30 Z" fill="#FF8C1A" stroke="#DB6E00"/><text x="12.0" y="18.0" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="start" dominant-baseline="middle">fijar</text><rect x="57.1" y="7.0" width="67.1" height="22" rx="11" fill="#FF8C1A" stroke="#DB6E00"/><text x="90.7" y="18.0" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle">nombre</text><text x="131.2" y="18.0" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="start" dominant-baseline="middle">a</text><rect x="146.6" y="7.0" width="86.6" height="22" rx="11" fill="#5CB1D6" stroke="#2E8EB8"/><text x="189.9" y="18.0" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle">respuesta</text></svg></span><span style="margin-top:-5px"><svg xmlns="http://www.w3.org/2000/svg" width="136" height="43" viewBox="0 0 136 43" role="img" style="vertical-align:middle"><path d="M0,6 Q0,0 6,0 H15 l3,5 h8 l3,-5 H130.20000000000002 Q136.20000000000002,0 136.20000000000002,6 V30 Q136.20000000000002,36 130.20000000000002,36 H6 Q0,36 0,30 Z" fill="#9966FF" stroke="#774DCB"/><text x="12.0" y="18.0" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="start" dominant-baseline="middle">decir</text><rect x="57.1" y="7.0" width="67.1" height="22" rx="11" fill="#FF8C1A" stroke="#DB6E00"/><text x="90.7" y="18.0" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle">nombre</text></svg></span></span></div></td>
+      <td>
+<pre><code>nombre = input(&quot;¿Cómo te llamas? &quot;)
+print(&quot;¡Hola, &quot; + nombre + &quot;!&quot;)</code></pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>¿Ves cómo se parecen? <strong>Preguntar</strong> en bloques es <code>input()</code> en Python. <strong>Guardar en una variable</strong> es el signo <code>=</code>. <strong>Decir/mostrar</strong> es <code>print()</code>. <strong>Unir textos</strong> es el signo <code>+</code>.</p>
+
+<div class="bloque bloque-nota">
+  <p class="bloque-titulo">3 cosas nuevas que trae el texto</p>
+  <ul>
+    <li><strong>Se escribe, no se arrastra:</strong> hay que teclear las órdenes con cuidado (una coma o un paréntesis mal puestos dan error).</li>
+    <li><strong>La sangría manda:</strong> lo que en bloques quedaba «dentro» de un <em>repetir</em> o un <em>si</em>, en Python se marca dejando un <strong>espacio a la izquierda</strong> (sangría). Es como encajar el bloque dentro.</li>
+    <li><strong>Los dos puntos <code>:</code></strong> avisan de que a continuación viene un bloque con sangría (lo verás en <code>for</code>, <code>if</code>, <code>while</code>…).</li>
+  </ul>
+</div>
+
+<h2>Tu editor de Python</h2>
+<div class="bloque bloque-resuelto">
+  <p class="bloque-titulo">online-python.com (sin instalar nada, también en casa)</p>
+  <p>Abre <a href="https://www.online-python.com/" target="_blank" rel="noopener">online-python.com</a>. Escribe el código en el recuadro grande y pulsa <strong>«Run»</strong>: el resultado sale abajo, en la consola. Para guardar, descarga el archivo <code>.py</code>.</p>
+</div>
+
+<h2>Tu primer programa: «Hola, mundo»</h2>
+<p>Es tradición que el primer programa en cualquier lenguaje muestre el mensaje «Hola, mundo». En Python se hace con la función <code>print()</code>. Lo que quieras mostrar va <strong>entre comillas</strong> y <strong>dentro de los paréntesis</strong>:</p>
+<pre><code>print(&quot;¡Hola, mundo!&quot;)</code></pre>
+<p>Puedes usar comillas dobles <code>"</code> o simples <code>'</code>, pero no las mezcles en el mismo texto.</p>
+
+<h2>Los comentarios</h2>
+<p>Un <strong>comentario</strong> es un texto que Python <strong>ignora</strong>: solo sirve para que tú (u otra persona) entendáis el programa. Empiezan con el símbolo <code>#</code>:</p>
+<pre><code># Este es mi primer programa
+print(&quot;¡Hola, mundo!&quot;)   # esto también es un comentario</code></pre>
+
+<div class="bloque bloque-actividad">
+  <p class="bloque-titulo">Tarea 1 · Hola, mundo</p>
+  <ol>
+    <li>Abre <a href="https://www.online-python.com/" target="_blank" rel="noopener">online-python.com</a>.</li>
+    <li>Escribe un programa que muestre por pantalla la frase <strong>¡Hola, mundo!</strong> con <code>print()</code>.</li>
+    <li>Añade en la primera línea un <strong>comentario</strong> con el nombre de la tarea.</li>
+    <li>Pulsa <strong>«Run»</strong> y comprueba que aparece la frase en la consola.</li>
+    <li>Descarga el archivo, ponle de nombre <code>tarea1.py</code> y súbelo a la tarea de <strong>Google Classroom</strong>.</li>
+  </ol>
+  <p><strong>Amplía (opcional):</strong> añade una segunda línea que muestre otra frase tuya.</p>
+</div>
+
+<div class="bloque bloque-nota">
+  <p class="bloque-titulo">Comprueba lo que has aprendido</p>
+  <p>Al final de la sesión encontrarás una <strong>autocomprobación</strong> para repasar la correspondencia bloques ↔ Python. No cuenta para nota: sirve para que veas si lo has pillado.</p>
+</div>
+
+</div>
+</div>
+</article><article id="block-mroliple-pgwt72iew" class="box">
+<header class="box-head no-icon">
+<h1 class="box-title">Relaciona</h1>
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idevice-1784272066320-wqpoyzc5e" class="idevice_node relate" data-idevice-path="../idevices/relate/" data-idevice-type="relate">
+<div class="relaciona-IDevice"><div class="relaciona-instructions gameQP-instructions"><p>Empareja cada bloque de Scratch con su equivalente en Python</p></div><div class="relaciona-DataGame js-hidden">{"typeGame":"Relaciona","author":"","randomCards":true,"instructions":"<p>Empareja cada bloque de Scratch con su equivalente en Python</p>","showMinimize":false,"itinerary":{"showClue":false,"clueGame":"","percentageClue":40,"showCodeAccess":false,"codeAccess":"","messageCodeAccess":""},"cardsGame":[{"url":"../content/resources/Captura de pantalla 2026-07-17 a las 9.14.20.png","x":0,"y":0,"author":"","alt":"","audio":"","color":"#000000","backcolor":"#ffffff","eText":"","urlBk":"","xBk":0,"yBk":0,"authorBk":"","altBk":"","audioBk":"","colorBk":"#000000","backcolorBk":"#ffffff","eTextBk":"print()"},{"url":"../content/resources/Captura de pantalla 2026-07-17 a las 9.18.06.png","x":0,"y":0,"author":"","alt":"","audio":"","color":"#000000","backcolor":"#ffffff","eText":"","urlBk":"","xBk":0,"yBk":0,"authorBk":"","altBk":"","audioBk":"","colorBk":"#000000","backcolorBk":"#ffffff","eTextBk":"input()"},{"url":"../content/resources/Captura de pantalla 2026-07-17 a las 9.19.18.png","x":0,"y":0,"author":"","alt":"","audio":"","color":"#000000","backcolor":"#ffffff","eText":"","urlBk":"","xBk":0,"yBk":0,"authorBk":"","altBk":"","audioBk":"","colorBk":"#000000","backcolorBk":"#ffffff","eTextBk":"x%20%3D%20..."},{"url":"../content/resources/Captura de pantalla 2026-07-17 a las 9.20.40.png","x":0,"y":0,"author":"","alt":"","audio":"","color":"#000000","backcolor":"#ffffff","eText":"","urlBk":"","xBk":0,"yBk":0,"authorBk":"","altBk":"","audioBk":"","colorBk":"#000000","backcolorBk":"#ffffff","eTextBk":"for"},{"url":"../content/resources/Captura de pantalla 2026-07-17 a las 9.21.19.png","x":0,"y":0,"author":"","alt":"","audio":"","color":"#000000","backcolor":"#ffffff","eText":"","urlBk":"","xBk":0,"yBk":0,"authorBk":"","altBk":"","audioBk":"","colorBk":"#000000","backcolorBk":"#ffffff","eTextBk":"if%20%2F%20else"}],"isScorm":0,"textButtonScorm":"Guardar la puntuación","repeatActivity":true,"weighted":100,"textAfter":"","version":2,"percentajeCards":100,"type":1,"showSolution":true,"timeShowSolution":3,"time":3,"evaluation":false,"evaluationID":"885a8e62-9576-498e-95c0-d119ed8bba52","id":"idevice-1784272066320-wqpoyzc5e","msgs":{"msgSubmit":"Enviar","msgClue":"¡Genial! La pista es:","msgCodeAccess":"Código de acceso","msgPlayStart":"Pulsa aquí para jugar","msgScore":"Puntuación","msgErrors":"Errores","msgHits":"Aciertos","msgMinimize":"Minimizar","msgMaximize":"Maximizar","msgFullScreen":"Pantalla Completa","msgExitFullScreen":"Salir del modo pantalla completa","msgNoImage":"Pregunta sin imágenes","msgEndGameScore":"Comience la partida antes de guardar la puntuación.","msgScoreScorm":"La puntuación no se puede guardar porque esta página no forma parte  de un paquete SCORM.","msgOnlySaveScore":"¡Solo puede guardar la puntuación una vez!","msgOnlySave":"Solo puede guardar una vez","msgInformation":"Información","msgYouScore":"Su puntuación","msgAuthor":"Autoría","msgOnlySaveAuto":"Su puntuación se guardará después de cada pregunta. Solo puede jugar una vez.","msgSaveAuto":"Su puntuación se guardará automáticamente después de cada pregunta.","msgSeveralScore":"Puede guardar la puntuación tantas veces como quiera","msgYouLastScore":"La última puntuación guardada es","msgActityComply":"Ya ha realizado esta actividad.","msgPlaySeveralTimes":"Puede realizar esta actividad cuantas veces quiera","msgClose":"Cerrar","msgAudio":"Audio","msgNumQuestions":"Número de tarjetas","msgTryAgain":"Necesitas al menos %s% de respuestas correctas para obtener la información. Inténtalo de nuevo.","msgEndGameM":"Has completado el juego. Tu puntuación es %s.","msgUncompletedActivity":"Actividad no completada","msgSuccessfulActivity":"Actividad superada. Puntuación: %s","msgUnsuccessfulActivity":"Actividad no superada. Puntuación: %s","msgTypeGame":"Relaciona","msgCheck":"Comprobar","msgRestart":"Reiniciar"}}</div><div class="game-evaluation-ids js-hidden" data-id="idevice-1784272066320-wqpoyzc5e" data-evaluationb="false" data-evaluationid="885a8e62-9576-498e-95c0-d119ed8bba52"></div><a href="../content/resources/Captura de pantalla 2026-07-17 a las 9.14.20.png" class="js-hidden relaciona-LinkImages">0</a><a href="../content/resources/Captura de pantalla 2026-07-17 a las 9.18.06.png" class="js-hidden relaciona-LinkImages">1</a><a href="../content/resources/Captura de pantalla 2026-07-17 a las 9.19.18.png" class="js-hidden relaciona-LinkImages">2</a><a href="../content/resources/Captura de pantalla 2026-07-17 a las 9.20.40.png" class="js-hidden relaciona-LinkImages">3</a><a href="../content/resources/Captura de pantalla 2026-07-17 a las 9.21.19.png" class="js-hidden relaciona-LinkImages">4</a><div class="relaciona-bns js-hidden">Su navegador no es compatible con esta herramienta.</div></div>
+</div>
+</div>
+</article>
+</div></main><div class="nav-buttons">
+<a href="../index.html" title="Anterior" class="nav-button nav-button-left"><span>Anterior</span></a>
+<a href="../html/s2-datos-operaciones-y-variables.html" title="Siguiente" class="nav-button nav-button-right"><span>Siguiente</span></a>
+</div>
+<footer id="siteFooter"><div id="siteFooterContent"> <div id="packageLicense" class=""> <p> <span class="license-label">Licencia: </span><span class="license">creative commons: attribution - share alike</span></p>
+</div>
+</div></footer>
+</div>
+<p id="made-with-eXe"> <a href="https://exelearning.net/" target="_blank" rel="noopener"> <span>Creado con eXeLearning <span>(Ventana nueva)</span></span></a></p>
+</body>
+</html>

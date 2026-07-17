@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es" id="exe-page-py-02">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="eXeLearning v4.0.2">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S2 · Datos, operaciones y variables | Programa en serio: de los bloques al texto con Python</title>
+<link rel="icon" type="image/x-icon" href="../libs/favicon.ico">
+<meta name="description" content="Unidad de introduccion a la programacion textual con Python para 3.o de ESO (Computacion y Robotica). SdA «Programa en serio: de los bloques al texto con Python».">
+<script>document.querySelector("html").classList.add("js");</script><script src="../libs/jquery/jquery.min.js"> </script><script src="../libs/common_i18n.js"> </script><script src="../libs/common.js"> </script><script src="../libs/exe_export.js"> </script><script>window.exeXapi={"odeId":"20260710120000PY3SDA00","packageTitle":"Programa en serio: de los bloques al texto con Python","language":"es"};</script><script src="../libs/xapi/exe_xapi.js"> </script><script src="../libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+<script src="../idevices/text/text.js"></script><link rel="stylesheet" href="../idevices/text/text.css">
+<script src="../idevices/quick-questions/quick-questions.js"></script><link rel="stylesheet" href="../idevices/quick-questions/quick-questions.css">
+<link rel="stylesheet" href="../content/css/base.css"><script src="../theme/style.js"> </script><link rel="stylesheet" href="../theme/style.css"><link rel="stylesheet" href="../theme/zzz-majuelo.css">
+</head>
+<body class="exe-export exe-web-site">
+<script>document.body.className+=" js"</script>
+<div class="exe-content exe-export pre-js siteNav-hidden"><a href="#page-py-02" id="skipNav">Skip to content</a> <nav id="siteNav">
+<ul>
+<li> <a href="../index.html" class="main-node no-ch">Python · Inicio</a>
+</li>
+<li> <a href="../html/s1-de-los-bloques-al-texto.html" class="no-ch">S1 · De los bloques al texto</a>
+</li>
+<li class="active"> <a href="../html/s2-datos-operaciones-y-variables.html" class="active no-ch">S2 · Datos, operaciones y variables</a>
+</li>
+<li> <a href="../html/s3-entrada-y-salida.html" class="no-ch">S3 · Entrada y salida</a>
+</li>
+<li> <a href="../html/s4-condicionales.html" class="no-ch">S4 · Condicionales</a>
+</li>
+<li> <a href="../html/s5-bucles-for.html" class="no-ch">S5 · Bucles for</a>
+</li>
+<li> <a href="../html/s6-while-y-anidamiento.html" class="no-ch">S6 · While y anidamiento</a>
+</li>
+<li> <a href="../html/s7-funciones-y-cadenas.html" class="no-ch">S7 · Funciones y cadenas</a>
+</li>
+<li> <a href="../html/s8-reto-final.html" class="no-ch">S8 · Reto final</a>
+</li>
+<li> <a href="../html/chuleta-de-python.html" class="no-ch">Chuleta de Python</a>
+</li>
+</ul>
+</nav><main id="page-py-02" class="page"> 
+<header class="main-header"> <p class="page-counter"> <span class="page-counter-label">Página </span><span class="page-counter-content"> <strong class="page-counter-current-page">3</strong><span class="page-counter-sep">/</span><strong class="page-counter-total">10</strong></span></p>
+
+<div class="package-header"><p class="package-title">Programa en serio: de los bloques al texto con Python</p></div>
+<div class="page-header"><h1 class="page-title">S2 · Datos, operaciones y variables</h1></div>
+</header><div id="page-content-page-py-02" class="page-content">
+<article id="block-py-02" class="box no-header">
+<header class="box-head no-icon">
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idev-py-02" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json" data-idevice-json-data="{&quot;ideviceId&quot;:&quot;idev-py-02&quot;}">
+
+<div class="bloque bloque-teoria">
+  <p class="bloque-titulo">Números y cajas para guardarlos</p>
+  <p>Un programa trabaja con <strong>datos</strong>: casi siempre, números y textos. En esta sesión aprenderás a <strong>operar con números</strong> y a guardarlos en <strong>variables</strong> (las «cajas» que ya usabas en bloques).</p>
+</div>
+
+<h2>Tipos de números</h2>
+<p>En Python hay dos tipos de números que usaremos:</p>
+<ul>
+  <li><strong>Enteros</strong> (<code>int</code>): sin decimales. Por ejemplo <code>1</code>, <code>-2</code>, <code>100</code>.</li>
+  <li><strong>Decimales</strong> o de coma flotante (<code>float</code>): con decimales. Por ejemplo <code>1.5</code>, <code>3.14</code>, <code>-0.75</code>.</li>
+</ul>
+<div class="bloque bloque-nota">
+  <p class="bloque-titulo">¡Ojo con los decimales!</p>
+  <p>En Python los decimales se separan con un <strong>punto</strong>, no con una coma: se escribe <code>3.14</code>, no <code>3,14</code>.</p>
+</div>
+
+<h2>Operaciones matemáticas</h2>
+<table class="tabla-datos">
+  <thead><tr><th>Símbolo</th><th>Operación</th><th>Ejemplo</th></tr></thead>
+  <tbody>
+    <tr><td><code>+</code></td><td>Suma</td><td><code>5 + 3</code> → 8</td></tr>
+    <tr><td><code>-</code></td><td>Resta</td><td><code>5 - 3</code> → 2</td></tr>
+    <tr><td><code>*</code></td><td>Multiplicación</td><td><code>5 * 3</code> → 15</td></tr>
+    <tr><td><code>/</code></td><td>División (con decimales)</td><td><code>5 / 2</code> → 2.5</td></tr>
+    <tr><td><code>//</code></td><td>División entera (sin decimales)</td><td><code>5 // 2</code> → 2</td></tr>
+    <tr><td><code>%</code></td><td>Resto de la división</td><td><code>5 % 2</code> → 1</td></tr>
+    <tr><td><code>**</code></td><td>Potencia (elevado a)</td><td><code>5 ** 2</code> → 25</td></tr>
+  </tbody>
+</table>
+<p>Para redondear un número decimal usamos <code>round()</code>. Por ejemplo <code>round(3.14159, 2)</code> da <code>3.14</code> (dos decimales).</p>
+
+<h2>Variables: cajas con nombre</h2>
+<p>Una <strong>variable</strong> es una caja donde guardas un dato con un <strong>nombre</strong>. Para guardar un valor se usa el signo <code>=</code>:</p>
+<pre><code>pi = 3.1416
+radio = 25.5
+perimetro = 2 * pi * radio
+print(perimetro)</code></pre>
+<p>El valor de una variable puede cambiar a lo largo del programa:</p>
+<pre><code>puntos = 0
+puntos = puntos + 10   # ahora puntos vale 10
+puntos = puntos + 5    # ahora puntos vale 15
+print(puntos)</code></pre>
+
+<div class="bloque bloque-nota">
+  <p class="bloque-titulo">Cómo nombrar bien las variables</p>
+  <ul>
+    <li>Usa <strong>nombres con significado</strong>: mejor <code>precio_total</code> que <code>x</code>.</li>
+    <li>Sin <strong>tildes, ñ ni espacios</strong>. Para separar palabras usa el guion bajo: <code>numero_de_alumnos</code> (esto se llama <em>snake_case</em>).</li>
+    <li>No uses <strong>palabras reservadas</strong> del lenguaje (como <code>print</code>, <code>input</code>, <code>for</code>, <code>if</code>, <code>while</code>…) como nombre de variable.</li>
+  </ul>
+</div>
+
+<div class="bloque bloque-actividad">
+  <p class="bloque-titulo">Tarea 2 · Cálculos variados</p>
+  <p>En online-python.com, escribe un programa que <strong>muestre por pantalla</strong> (con <code>print()</code>) los siguientes resultados, en este orden:</p>
+  <ol>
+    <li>La suma de estas distancias: 100, 15, 50 y 80.</li>
+    <li>El cuadrado de 55 (usa la potencia <code>**</code>).</li>
+    <li>La media de estas notas: 6, 7, 6 y 8 (suma y divide entre 4; usa paréntesis).</li>
+    <li>El resultado anterior redondeado a un decimal (con <code>round()</code>).</li>
+    <li>El resto de dividir 53 entre 7 (con <code>%</code>).</li>
+  </ol>
+  <p>Descarga el archivo como <code>tarea2.py</code> y súbelo a Google Classroom.</p>
+</div>
+
+<div class="bloque bloque-actividad">
+  <p class="bloque-titulo">Tarea 3 · Variables</p>
+  <p>Escribe un programa que use <strong>variables</strong> para resolver cada apartado. Guarda cada dato en su variable con un nombre claro y muestra el resultado con <code>print()</code>:</p>
+  <ol>
+    <li><strong>Perímetro de un círculo:</strong> variables para <code>pi</code> (3.14159265) y <code>radio</code> (25.5); calcula el perímetro (perímetro = 2 · pi · radio).</li>
+    <li><strong>Volumen de un cubo:</strong> variable <code>lado</code> (4); calcula el volumen (lado elevado a 3).</li>
+    <li><strong>Cambio de una compra:</strong> variables <code>pagado</code> (30) y <code>precio</code> (23.99); calcula el cambio a devolver.</li>
+    <li><strong>Precio con descuento:</strong> variables <code>precio</code> (149.90) y <code>descuento</code> (15, en %); calcula el precio final.</li>
+  </ol>
+  <p><strong>Cómo entregar varios ejercicios:</strong> crea un archivo por apartado (<code>ejercicio1.py</code>, <code>ejercicio2.py</code>…) con el botón de añadir archivo del editor y, al terminar, usa <strong>«Save all files as project (ZIP)»</strong>. Sube el archivo como <code>tarea3.zip</code> a Google Classroom.</p>
+</div>
+
+</div>
+</div>
+</article><article id="block-mrom2mhk-8dl3qxzv2" class="box">
+<header class="box-head no-icon">
+<h1 class="box-title">Test</h1>
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idevice-1784272995415-84qrn22mg" class="idevice_node quick-questions" data-idevice-path="../idevices/quick-questions/" data-idevice-type="quick-questions">
+<div class="quext-IDevice"><div class="game-evaluation-ids js-hidden" data-id="idevice-1784272995415-84qrn22mg" data-evaluationb="false" data-evaluationid="885a8e62-9576-498e-95c0-d119ed8bba52"></div><div class="quext-instructions QXTP-instructions"><p>Elige la respuesta correcta</p></div><div class="quext-version js-hidden">2</div><div class="quext-feedback-game"></div><div class="quext-DataGame js-hidden">%E9%B0%F3%E1%FB%F5%FC%F3%E6%E7%E0%F3%B0%A8%B0%B0%BE%B0%F3%E7%E6%FA%FD%E0%B0%A8%B0%B0%BE%B0%F3%E7%E6%FA%FD%E0%C4%FB%F6%F7%FD%B0%A8%B0%B0%BE%B0%E6%EB%E2%F7%D5%F3%FF%F7%B0%A8%B0%C3%E7%D7%EA%E6%B0%BE%B0%F7%FC%F6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%FB%F6%C4%FB%F6%F7%FD%B0%A8%B0%B0%BE%B0%E1%E6%F3%E0%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%FB%FC%E1%E6%E0%E7%F1%E6%FB%FD%FC%E1%D7%EA%F7%B0%A8%B0%B7%A1%D1%E2%B7%A1%D7%D7%FE%FB%F5%F7%B7%A0%A2%FE%F3%B7%A0%A2%E0%F7%E1%E2%E7%F7%E1%E6%F3%B7%A0%A2%F1%FD%E0%E0%F7%F1%E6%F3%B7%A1%D1%BD%E2%B7%A1%D7%B0%BE%B0%FB%FC%E1%E6%E0%E7%F1%E6%FB%FD%FC%E1%B0%A8%B0%D7%FE%FB%F8%F3%B2%FE%F3%B2%E0%F7%E1%E2%E7%F7%E1%E6%F3%B2%F1%FD%E0%E0%F7%F1%E6%F3%B2%B0%BE%B0%E1%FA%FD%E5%DF%FB%FC%FB%FF%FB%E8%F7%B0%A8%F4%F3%FE%E1%F7%BE%B0%FD%E2%E6%FB%FD%FC%E1%C0%F3%FF%F6%FD%FC%B0%A8%E6%E0%E7%F7%BE%B0%F3%FC%E1%E5%F7%E0%E1%C0%F3%FF%F6%FD%FC%B0%A8%E6%E0%E7%F7%BE%B0%E1%FA%FD%E5%C1%FD%FE%E7%E6%FB%FD%FC%B0%A8%E6%E0%E7%F7%BE%B0%E6%FB%FF%F7%C1%FA%FD%E5%C1%FD%FE%E7%E6%FB%FD%FC%B0%A8%A1%BE%B0%E7%E1%F7%DE%FB%E4%F7%E1%B0%A8%E6%E0%E7%F7%BE%B0%FC%E7%FF%F0%F7%E0%DE%FB%E4%F7%E1%B0%A8%A1%BE%B0%FB%E6%FB%FC%F7%E0%F3%E0%EB%B0%A8%E9%B0%E1%FA%FD%E5%D1%FE%E7%F7%B0%A8%F4%F3%FE%E1%F7%BE%B0%F1%FE%E7%F7%D5%F3%FF%F7%B0%A8%B0%B0%BE%B0%E2%F7%E0%F1%F7%FC%E6%F3%F5%F7%D1%FE%E7%F7%B0%A8%A6%A2%BE%B0%E1%FA%FD%E5%D1%FD%F6%F7%D3%F1%F1%F7%E1%E1%B0%A8%F4%F3%FE%E1%F7%BE%B0%F1%FD%F6%F7%D3%F1%F1%F7%E1%E1%B0%A8%B0%B0%BE%B0%FF%F7%E1%E1%F3%F5%F7%D1%FD%F6%F7%D3%F1%F1%F7%E1%E1%B0%A8%B0%B0%EF%BE%B0%E3%E7%F7%E1%E6%FB%FD%FC%E1%D5%F3%FF%F7%B0%A8%C9%E9%B0%E6%EB%E2%F7%B0%A8%A2%BE%B0%E6%FB%FF%F7%B0%A8%A2%BE%B0%FC%E7%FF%F0%F7%E0%DD%E2%E6%FB%FD%FC%E1%B0%A8%A6%BE%B0%EA%B0%A8%A2%BE%B0%EB%B0%A8%A2%BE%B0%F3%E7%E6%FA%FD%E0%B0%A8%B0%B0%BE%B0%F3%FE%E6%B0%A8%B0%B0%BE%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%A3%BE%B0%E7%E0%FE%B0%A8%B0%B0%BE%B0%F3%E7%F6%FB%FD%B0%A8%B0%B0%BE%B0%E1%FD%E7%FC%F6%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%FF%F3%F5%F7%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F4%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E6%C1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F7%C6%F7%EA%E6%B0%A8%B0%B0%BE%B0%E3%E7%F7%EA%E6%FB%FD%FC%B0%A8%B0-%D1%E7s%FE%B2%F7%E1%B2%E7%FC%B2%FCh%FF%F7%E0%FD%B2%F6%F7%F1%FB%FF%F3%FE%B2%F1%FD%E0%E0%F7%F1%E6%FD%B2%F7%FC%B2%C2%EB%E6%FA%FD%FC%AD%B0%BE%B0%FD%E2%E6%FB%FD%FC%E1%B0%A8%C9%B0%A1%BC%A3%A6%B0%BE%B0%A1%BE%A3%A6%B0%BE%B0%CE%B0%A1%BC%A3%A6%CE%B0%B0%BE%B0%CE%B0%A1%BE%A3%A6%CE%B0%B0%CF%BE%B0%E1%FD%FE%E7%E6%FB%FD%FC%B0%A8%A2%BE%B0%FF%E1%F5%DA%FB%E6%B0%A8%B0%D0%FB%F7%FC%A8%B2%FE%FD%E1%B2%F6%F7%F1%FB%FF%F3%FE%F7%E1%B2%E4%F3%FC%B2%F1%FD%FC%B2%E2%E7%FC%E6%FD%BC%B0%BE%B0%FF%E1%F5%D7%E0%E0%FD%E0%B0%A8%B0%D7%FC%B2%C2%EB%E6%FA%FD%FC%B2%FE%FD%E1%B2%FCh%FF%F7%E0%FD%E1%B2%E4%F3%FC%B2%E1%FB%FC%B2%F7%FC%E6%E0%F7%F1%FD%FF%FB%FE%FE%F3%E0%B2%EB%B2%F7%FE%B2%F6%F7%F1%FB%FF%F3%FE%B2%E1%F7%B2%E1%F7%E2%F3%E0%F3%B2%F1%FD%FC%B2%E2%E7%FC%E6%FD%A8%B2%A1%BC%A3%A6%B0%EF%BE%E9%B0%E6%EB%E2%F7%B0%A8%A2%BE%B0%E6%FB%FF%F7%B0%A8%A2%BE%B0%FC%E7%FF%F0%F7%E0%DD%E2%E6%FB%FD%FC%E1%B0%A8%A6%BE%B0%EA%B0%A8%A2%BE%B0%EB%B0%A8%A2%BE%B0%F3%E7%E6%FA%FD%E0%B0%A8%B0%B0%BE%B0%F3%FE%E6%B0%A8%B0%B0%BE%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%A3%BE%B0%E7%E0%FE%B0%A8%B0%B0%BE%B0%F3%E7%F6%FB%FD%B0%A8%B0%B0%BE%B0%E1%FD%E7%FC%F6%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%FF%F3%F5%F7%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F4%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E6%C1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F7%C6%F7%EA%E6%B0%A8%B0%B0%BE%B0%E3%E7%F7%EA%E6%FB%FD%FC%B0%A8%B0%C6%E0%F3%E1%B2%E2%B2%AF%B2%A0%B2%EB%B2%E2%B2%AF%B2%E2%B2%B9%B2%A1%BE%B2-%F1%E7s%FC%E6%FD%B2%E4%F3%FE%F7%B2%E2%AD%B0%BE%B0%FD%E2%E6%FB%FD%FC%E1%B0%A8%C9%B0%A0%B0%BE%B0%A1%B0%BE%B0%A7%B0%BE%B0%A0%A1%B0%CF%BE%B0%E1%FD%FE%E7%E6%FB%FD%FC%B0%A8%A0%BE%B0%FF%E1%F5%DA%FB%E6%B0%A8%B0%D1%FD%E0%E0%F7%F1%E6%FD%A8%B2%A0%B2%B9%B2%A1%B2%AF%B2%A7%B0%BE%B0%FF%E1%F5%D7%E0%E0%FD%E0%B0%A8%B0%E2%B2%AF%B2%E2%B2%B9%B2%A1%B2%E1%E7%FF%F3%B2%A1%B2%F3%FE%B2%E4%F3%FE%FD%E0%B2%F3%FC%E6%F7%E0%FB%FD%E0%B2%BA%A0%BB%A8%B2%F6%F3%B2%A7%BC%B2%C1%FD%FE%FD%B2%F6%F3%E0%7F%F3%B2%A0%A1%B2%E1%FB%B2%F4%E7%F7%E0%F3%FC%B2%E4%F3%FE%FD%E0%F7%E1%B2%E6%FB%E2%FD%B2%E6%F7%EA%E6%FD%B2%BA%E2%B2%AF%B2%CE%B0%A0%CE%B0%B2%EB%B2%E2%B2%AF%B2%E2%B2%B9%B2%CE%B0%A1%CE%B0%BB%B0%EF%BE%E9%B0%E6%EB%E2%F7%B0%A8%A2%BE%B0%E6%FB%FF%F7%B0%A8%A2%BE%B0%FC%E7%FF%F0%F7%E0%DD%E2%E6%FB%FD%FC%E1%B0%A8%A6%BE%B0%EA%B0%A8%A2%BE%B0%EB%B0%A8%A2%BE%B0%F3%E7%E6%FA%FD%E0%B0%A8%B0%B0%BE%B0%F3%FE%E6%B0%A8%B0%B0%BE%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%A3%BE%B0%E7%E0%FE%B0%A8%B0%B0%BE%B0%F3%E7%F6%FB%FD%B0%A8%B0%B0%BE%B0%E1%FD%E7%FC%F6%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%FF%F3%F5%F7%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F4%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E6%C1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F7%C6%F7%EA%E6%B0%A8%B0%B0%BE%B0%E3%E7%F7%EA%E6%FB%FD%FC%B0%A8%B0-%C3%E7%7B%B2%E0%F7%E1%E7%FE%E6%F3%F6%FD%B2%F6%F3%B2%F7%E1%E6%F3%B2%FD%E2%F7%E0%F3%F1%FBa%FC%AD%B2%A5%B2%B7%B2%A0%B0%BE%B0%FD%E2%E6%FB%FD%FC%E1%B0%A8%C9%B0%A1%BC%A7%B0%BE%B0%A1%B0%BE%B0%A3%A6%B0%BE%B0%A3%B0%CF%BE%B0%E1%FD%FE%E7%E6%FB%FD%FC%B0%A8%A1%BE%B0%FF%E1%F5%DA%FB%E6%B0%A8%B0%C1%7F%A8%B2%B7%B2%F7%E1%B2%F7%FE%B2%CE%B0%FFa%F6%E7%FE%FD%CE%B0%BE%B2%E3%E7%F7%B2%F7%E1%B2%F7%FE%B2%E0%F7%E1%E6%FD%B2%F6%F7%B2%FE%F3%B2%F6%FB%E4%FB%E1%FBa%FC%B0%BE%B0%FF%E1%F5%D7%E0%E0%FD%E0%B0%A8%B0%B7%B2%F6%F3%B2%F7%FE%B2%E0%F7%E1%E6%FD%B2%F6%F7%B2%F6%FB%E4%FB%F6%FB%E0%A8%B2%A5%B2%F7%FC%E6%E0%F7%B2%A0%BE%B2%E1%FD%F0%E0%F3%B2%A3%BC%B0%EF%CF%BE%B0%FB%E1%C1%F1%FD%E0%FF%B0%A8%A2%BE%B0%E6%F7%EA%E6%D0%E7%E6%E6%FD%FC%C1%F1%FD%E0%FF%B0%A8%B0%D5%E7%F3%E0%F6%F3%E0%B2%FE%F3%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B0%BE%B0%E0%F7%E2%F7%F3%E6%D3%F1%E6%FB%E4%FB%E6%EB%B0%A8%E6%E0%E7%F7%BE%B0%E5%F7%FB%F5%FA%E6%F7%F6%B0%A8%A3%A2%A2%BE%B0%E6%FB%E6%FE%F7%B0%A8%B0%B0%BE%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%F4%F3%FE%E1%F7%BE%B0%E6%F7%EA%E6%D3%F4%E6%F7%E0%B0%A8%B0%B0%BE%B0%E6%F7%EA%E6%D4%F7%F7%F6%D0%F3%F1%F9%B0%A8%B0%B0%BE%B0%F5%F3%FF%F7%DF%FD%F6%F7%B0%A8%A3%BE%B0%F4%F7%F7%F6%D0%F3%F1%F9%B0%A8%F4%F3%FE%E1%F7%BE%B0%E2%F7%E0%F1%F7%FC%E6%F3%F8%F7%D4%D0%B0%A8%A3%A2%A2%BE%B0%E4%F7%E0%E1%FB%FD%FC%B0%A8%A0%BE%B0%F1%E7%E1%E6%FD%FF%DF%F7%E1%E1%F3%F5%F7%E1%B0%A8%E6%E0%E7%F7%BE%B0%E2%F7%E0%F1%F7%FC%E6%F3%F8%F7%C3%E7%F7%E1%E6%FB%FD%FC%E1%B0%A8%A3%A2%A2%BE%B0%F7%E4%F3%FE%E7%F3%E6%FB%FD%FC%B0%A8%F4%F3%FE%E1%F7%BE%B0%F7%E4%F3%FE%E7%F3%E6%FB%FD%FC%DB%D6%B0%A8%B0%AA%AA%A7%F3%AA%F7%A4%A0%BF%AB%A7%A5%A4%BF%A6%AB%AA%F7%BF%AB%A7%F1%A2%BF%F6%A3%A3%AB%F7%F6%AA%F0%F0%F3%A7%A0%B0%BE%B0%F5%FE%FD%F0%F3%FE%C6%FB%FF%F7%B0%A8%A2%BE%B0%FB%F6%B0%A8%B0%FB%F6%F7%E4%FB%F1%F7%BF%A3%A5%AA%A6%A0%A5%A0%AB%AB%A7%A6%A3%A7%BF%AA%A6%E3%E0%FC%A0%A0%FF%F5%B0%BE%B0%FF%E1%F5%E1%B0%A8%E9%B0%FF%E1%F5%C1%E6%F3%E0%E6%D5%F3%FF%F7%B0%A8%B0%C2%E7%FE%E1%F3%B2%F3%E3%E7%7F%B2%E2%F3%E0%F3%B2%F7%FF%E2%F7%E8%F3%E0%B0%BE%B0%FF%E1%F5%C1%E7%F0%FF%FB%E6%B0%A8%B0%D7%FC%E4%FB%F3%E0%B0%BE%B0%FF%E1%F5%D1%FE%E7%F7%B0%A8%B03%D5%F7%FC%FB%F3%FE%B3%B2%DE%F3%B2%E2%FB%E1%E6%F3%B2%F7%E1%A8%B0%BE%B0%FF%E1%F5%DC%F7%E5%D5%F3%FF%F7%B0%A8%B0%C2%E7%FE%E1%F3%B2%F3%E3%E7%7F%B2%E2%F3%E0%F3%B2%F7%FF%E2%F7%E8%F3%E0%B2%FD%E6%E0%F3%B2%E2%F3%E0%E6%FB%F6%F3%B0%BE%B0%FF%E1%F5%D1%FD%F6%F7%D3%F1%F1%F7%E1%E1%B0%A8%B0%D1a%F6%FB%F5%FD%B2%F6%F7%B2%F3%F1%F1%F7%E1%FD%B0%BE%B0%FF%E1%F5%DB%FC%F4%FD%E0%FF%F3%E6%FB%FD%FC%DE%FD%FD%F9%FB%FC%F5%B0%A8%B03%D5%F7%FC%FB%F3%FE%B3%B2%DE%F3%B2%FB%FC%F4%FD%E0%FF%F3%F1%FBa%FC%B2%E3%E7%F7%B2%F7%E1%E6%F3%F0%F3%B2%F0%E7%E1%F1%F3%FC%F6%FD%B0%BE%B0%FF%E1%F5%C2%FE%F3%EB%C1%E6%F3%E0%E6%B0%A8%B0%C2%E7%FE%E1%F3%B2%F3%E3%E7%7F%B2%E2%F3%E0%F3%B2%F8%E7%F5%F3%E0%B0%BE%B0%FF%E1%F5%D7%E0%E0%FD%E0%E1%B0%A8%B0%D7%E0%E0%FD%E0%F7%E1%B0%BE%B0%FF%E1%F5%DA%FB%E6%E1%B0%A8%B0%D3%F1%FB%F7%E0%E6%FD%E1%B0%BE%B0%FF%E1%F5%C1%F1%FD%E0%F7%B0%A8%B0%C2%E7%FC%E6%E7%F3%F1%FBa%FC%B0%BE%B0%FF%E1%F5%C5%F7%FB%F5%FA%E6%B0%A8%B0%C2%F7%E1%FD%B0%BE%B0%FF%E1%F5%DF%FB%FC%FB%FF%FB%E8%F7%B0%A8%B0%DF%FB%FC%FB%FF%FB%E8%F3%E0%B0%BE%B0%FF%E1%F5%DF%F3%EA%FB%FF%FB%E8%F7%B0%A8%B0%DF%F3%EA%FB%FF%FB%E8%F3%E0%B0%BE%B0%FF%E1%F5%C6%FB%FF%F7%B0%A8%B0%C6%FB%F7%FF%E2%FD%B2%E2%FD%E0%B2%E2%E0%F7%F5%E7%FC%E6%F3%B0%BE%B0%FF%E1%F5%DE%FB%E4%F7%B0%A8%B0%C4%FB%F6%F3%B0%BE%B0%FF%E1%F5%D4%E7%FE%FE%C1%F1%E0%F7%F7%FC%B0%A8%B0%C2%F3%FC%E6%F3%FE%FE%F3%B2%D1%FD%FF%E2%FE%F7%E6%F3%B0%BE%B0%FF%E1%F5%D7%EA%FB%E6%D4%E7%FE%FE%C1%F1%E0%F7%F7%FC%B0%A8%B0%C1%F3%FE%FB%E0%B2%F6%F7%FE%B2%FF%FD%F6%FD%B2%E2%F3%FC%E6%F3%FE%FE%F3%B2%F1%FD%FF%E2%FE%F7%E6%F3%B0%BE%B0%FF%E1%F5%DC%E7%FF%C3%E7%F7%E1%E6%FB%FD%FC%E1%B0%A8%B0%DCh%FF%F7%E0%FD%B2%F6%F7%B2%E2%E0%F7%F5%E7%FC%E6%F3%E1%B0%BE%B0%FF%E1%F5%DC%FD%DB%FF%F3%F5%F7%B0%A8%B0%C2%E0%F7%F5%E7%FC%E6%F3%B2%E1%FB%FC%B2%FB%FFs%F5%F7%FC%F7%E1%B0%BE%B0%FF%E1%F5%D1%FD%FD%FE%B0%A8%B03%D0%FB%F7%FC%B3%B0%BE%B0%FF%E1%F5%DE%FD%E1%F7%C6%B0%A8%B0%DA%F3%B2%E2%F7%E0%F6%FB%F6%FD%B2%A1%A1%A2%B2%E2%E7%FC%E6%FD%E1%B0%BE%B0%FF%E1%F5%DE%FD%E1%F7%DE%FB%E4%F7%B0%A8%B0%DA%F3%B2%E2%F7%E0%F6%FB%F6%FD%B2%E7%FC%F3%B2%E4%FB%F6%F3%B0%BE%B0%FF%E1%F5%DE%FD%E1%E6%DE%FB%E4%F7%E1%B0%A8%B03%DA%F3%B2%E2%F7%E0%F6%FB%F6%FD%B2%E6%FD%F6%F3%E1%B2%E1%E7%E1%B2%E4%FB%F6%F3%E1%B3%B0%BE%B0%FF%E1%F5%D3%FE%FE%C3%E7%F7%E1%E6%FB%FD%FC%E1%B0%A8%B03%D1%FD%FF%E2%FE%F7%E6%F3%F6%F3%E1%B2%FE%F3%E1%B2%E2%E0%F7%F5%E7%FC%E6%F3%E1%B3%B0%BE%B0%FF%E1%F5%C1%E7%F1%F1%F7%E1%E1%F7%E1%B0%A8%B03%D1%FD%E0%E0%F7%F1%E6%FD%B3%B2%EE%B23%D7%EA%F1%F7%FE%F7%FC%E6%F7%B3%B2%EE%B23%D5%F7%FC%FB%F3%FE%B3%B2%EE%B23%DF%E7%EB%B2%F0%FB%F7%FC%B3%B2%EE%B23%C2%F7%E0%F4%F7%F1%E6%FD%B3%B0%BE%B0%FF%E1%F5%D4%F3%FB%FE%E7%E0%F7%E1%B0%A8%B03%DC%FD%B2%F7%E0%F3%B2%F7%E1%FD%B3%B2%EE%B23%DB%FC%F1%FD%E0%E0%F7%F1%E6%FD%B3%B2%EE%B23%DC%FD%B2%F7%E1%B2%F1%FD%E0%E0%F7%F1%E6%FD%B3%B2%EE%B23%DE%FD%B2%E1%F7%FC%E6%FB%FF%FD%E1%B3%B2%EE%B23%D7%E0%E0%FD%E0%B3%B0%BE%B0%FF%E1%F5%C1%F1%FD%E0%F7%C1%F1%FD%E0%FF%B0%A8%B0%DE%F3%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%FC%FD%B2%E1%F7%B2%E2%E7%F7%F6%F7%B2%F5%E7%F3%E0%F6%F3%E0%B2%E2%FD%E0%E3%E7%F7%B2%F7%E1%E6%F3%B2%E2s%F5%FB%FC%F3%B2%FC%FD%B2%F4%FD%E0%FF%F3%B2%E2%F3%E0%E6%F7%B2%B2%F6%F7%B2%E7%FC%B2%E2%F3%E3%E7%F7%E6%F7%B2%C1%D1%DD%C0%DF%BC%B0%BE%B0%FF%E1%F5%C3%E7%F7%E1%E6%FB%FD%FC%B0%A8%B0%C2%E0%F7%F5%E7%FC%E6%F3%B0%BE%B0%FF%E1%F5%DD%FC%FE%EB%C1%F3%E4%F7%C1%F1%FD%E0%F7%B0%A8%B03%C1%FD%FE%FD%B2%E2%E7%F7%F6%F7%B2%F5%E7%F3%E0%F6%F3%E0%B2%FE%F3%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%E7%FC%F3%B2%E4%F7%E8%B3%B0%BE%B0%FF%E1%F5%DD%FC%FE%EB%C1%F3%E4%F7%B0%A8%B0%C1%FD%FE%FD%B2%E2%E7%F7%F6%F7%B2%F5%E7%F3%E0%F6%F3%E0%B2%E7%FC%F3%B2%E4%F7%E8%B0%BE%B0%FF%E1%F5%DB%FC%F4%FD%E0%FF%F3%E6%FB%FD%FC%B0%A8%B0%DB%FC%F4%FD%E0%FF%F3%F1%FBa%FC%B0%BE%B0%FF%E1%F5%D3%E7%E6%FA%FD%E0%B0%A8%B0%D3%E7%E6%FD%E0%7F%F3%B0%BE%B0%FF%E1%F5%DD%FC%FE%EB%C1%F3%E4%F7%D3%E7%E6%FD%B0%A8%B0%C1%E7%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%E1%F7%B2%F5%E7%F3%E0%F6%F3%E0s%B2%F6%F7%E1%E2%E7%7B%E1%B2%F6%F7%B2%F1%F3%F6%F3%B2%E2%E0%F7%F5%E7%FC%E6%F3%BC%B2%C1%FD%FE%FD%B2%E2%E7%F7%F6%F7%B2%F8%E7%F5%F3%E0%B2%E7%FC%F3%B2%E4%F7%E8%BC%B0%BE%B0%FF%E1%F5%C1%F3%E4%F7%D3%E7%E6%FD%B0%A8%B0%C1%E7%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%E1%F7%B2%F5%E7%F3%E0%F6%F3%E0s%B2%F3%E7%E6%FD%FFs%E6%FB%F1%F3%FF%F7%FC%E6%F7%B2%F6%F7%E1%E2%E7%7B%E1%B2%F6%F7%B2%F1%F3%F6%F3%B2%E2%E0%F7%F5%E7%FC%E6%F3%BC%B0%BE%B0%FF%E1%F5%CB%FD%E7%C1%F1%FD%E0%F7%B0%A8%B0%C1%E7%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B0%BE%B0%FF%E1%F5%C1%F7%E4%F7%E0%F3%FE%C1%F1%FD%E0%F7%B0%A8%B0%C2%E7%F7%F6%F7%B2%F5%E7%F3%E0%F6%F3%E0%B2%FE%F3%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%E6%F3%FC%E6%F3%E1%B2%E4%F7%F1%F7%E1%B2%F1%FD%FF%FD%B2%E3%E7%FB%F7%E0%F3%B0%BE%B0%FF%E1%F5%CB%FD%E7%DE%F3%E1%E6%C1%F1%FD%E0%F7%B0%A8%B0%DE%F3%B2h%FE%E6%FB%FF%F3%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%F5%E7%F3%E0%F6%F3%F6%F3%B2%F7%E1%B0%BE%B0%FF%E1%F5%D3%F1%E6%FB%E6%EB%D1%FD%FF%E2%FE%EB%B0%A8%B0%CB%F3%B2%FA%F3%B2%E0%F7%F3%FE%FB%E8%F3%F6%FD%B2%F7%E1%E6%F3%B2%F3%F1%E6%FB%E4%FB%F6%F3%F6%BC%B0%BE%B0%FF%E1%F5%C2%FE%F3%EB%C1%F7%E4%F7%E0%F3%FE%C6%FB%FF%F7%E1%B0%A8%B0%C2%E7%F7%F6%F7%B2%E0%F7%F3%FE%FB%E8%F3%E0%B2%F7%E1%E6%F3%B2%F3%F1%E6%FB%E4%FB%F6%F3%F6%B2%F1%E7%F3%FC%E6%F3%E1%B2%E4%F7%F1%F7%E1%B2%E3%E7%FB%F7%E0%F3%B0%BE%B0%FF%E1%F5%C6%E0%EB%D3%F5%F3%FB%FC%B0%A8%B0%DC%F7%F1%F7%E1%FB%E6%F3%E1%B2%F3%FE%B2%FF%F7%FC%FD%E1%B2%B7%E1%B7%B2%F6%F7%B2%E0%F7%E1%E2%E7%F7%E1%E6%F3%E1%B2%F1%FD%E0%E0%F7%F1%E6%F3%E1%B2%E2%F3%E0%F3%B2%FD%F0%E6%F7%FC%F7%E0%B2%FE%F3%B2%FB%FC%F4%FD%E0%FF%F3%F1%FBa%FC%BC%B2%DB%FC%E6%7B%FC%E6%F3%FE%FD%B2%F6%F7%B2%FC%E7%F7%E4%FD%BC%B0%BE%B0%FF%E1%F5%C4%FB%F6%F7%FD%DB%FC%E6%E0%FD%B0%A8%B0%C4%7F%F6%F7%FD%B2%F6%F7%B2%FB%FC%E6%E0%FD%F6%E7%F1%F1%FBa%FC%B0%BE%B0%FF%E1%F5%D1%FE%FD%E1%F7%B0%A8%B0%D1%F7%E0%E0%F3%E0%B0%BE%B0%FF%E1%F5%DD%E2%E6%FB%FD%FC%B0%A8%B0%DD%E2%F1%FBa%FC%B0%BE%B0%FF%E1%F5%C7%E1%F7%D4%E7%FE%DB%FC%F4%FD%E0%FF%F3%E6%FB%FD%FC%B0%A8%B0%F7%B2%FB%FC%F4%FD%E0%FF%F3%F1%FBa%FC%B2%E3%E7%F7%B2%E1%F7%E0s%B2%FF%E7%EB%B2h%E6%FB%FE%B0%BE%B0%FF%E1%F5%DE%FD%F3%F6%FB%FC%F5%B0%A8%B0%D1%F3%E0%F5%F3%FC%F6%FD%BC%B2%D7%E1%E2%F7%E0%F7%BE%B2%E2%FD%E0%B2%F4%F3%E4%FD%E0%BC%BC%BC%B0%BE%B0%FF%E1%F5%C2%FD%FB%FC%E6%E1%B0%A8%B0%E2%E7%FC%E6%FD%E1%B0%BE%B0%FF%E1%F5%D3%E7%F6%FB%FD%B0%A8%B0%D3%E7%F6%FB%FD%B0%BE%B0%FF%E1%F5%D7%FC%F6%D5%F3%FF%F7%C1%F1%FD%E0%F7%B0%A8%B0%DB%FC%FB%F1%FB%F3%B2%F7%FE%B2%F8%E7%F7%F5%FD%BC%BC%BC%B0%BE%B0%FF%E1%F5%C7%FC%F1%FD%FF%E2%FE%F7%E6%F7%F6%D3%F1%E6%FB%E4%FB%E6%EB%B0%A8%B0%D3%F1%E6%FB%E4%FB%F6%F3%F6%B2%FC%FD%B2%F1%FD%FF%E2%FE%F7%E6%F3%F6%F3%B0%BE%B0%FF%E1%F5%C1%E7%F1%F1%F7%E1%E1%F4%E7%FE%D3%F1%E6%FB%E4%FB%E6%EB%B0%A8%B0%D3%F1%E6%FB%E4%FB%F6%F3%F6%B2%E1%E7%E2%F7%E0%F3%F6%F3%BC%B2%C2%E7%FC%E6%E7%F3%F1%FBa%FC%A8%B2%B7%E1%B0%BE%B0%FF%E1%F5%C7%FC%E1%E7%F1%F1%F7%E1%E1%F4%E7%FE%D3%F1%E6%FB%E4%FB%E6%EB%B0%A8%B0%D3%F1%E6%FB%E4%FB%F6%F3%F6%B2%FC%FD%B2%E1%E7%E2%F7%E0%F3%F6%F3%BC%B2%C2%E7%FC%E6%E7%F3%F1%FBa%FC%A8%B2%B7%E1%B0%BE%B0%FF%E1%F5%C6%EB%E2%F7%D5%F3%FF%F7%B0%A8%B0%C2%E0%F7%F5%E7%FC%E6%F3%E1%B2%E0s%E2%FB%F6%F3%E1%B0%EF%EF</div><div class="quext-bns js-hidden">Su navegador no es compatible con esta herramienta.</div></div>
+</div>
+</div>
+</article>
+</div></main><div class="nav-buttons">
+<a href="../html/s1-de-los-bloques-al-texto.html" title="Anterior" class="nav-button nav-button-left"><span>Anterior</span></a>
+<a href="../html/s3-entrada-y-salida.html" title="Siguiente" class="nav-button nav-button-right"><span>Siguiente</span></a>
+</div>
+<footer id="siteFooter"><div id="siteFooterContent"> <div id="packageLicense" class=""> <p> <span class="license-label">Licencia: </span><span class="license">creative commons: attribution - share alike</span></p>
+</div>
+</div></footer>
+</div>
+<p id="made-with-eXe"> <a href="https://exelearning.net/" target="_blank" rel="noopener"> <span>Creado con eXeLearning <span>(Ventana nueva)</span></span></a></p>
+</body>
+</html>
