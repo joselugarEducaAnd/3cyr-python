@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Traza paso a paso</title>
+<style>
+/* ===========================================================
+   Widget manipulable · SdA 03 de 3.º CYR (Python) · traza paso a paso
+   Autocontenido: sin CDN, sin dependencias, sin almacenamiento.
+   Trazas precalculadas en JS: no hay intérprete de Python.
+   Modo por página: name del iframe (o #modo / ?modo=): variables · condicional · for · while
+   =========================================================== */
+:root{
+  --chrome:#3b3a7a; --chrome-osc:#2a295a; --chrome-tinte:#ecebf5; --chrome-linea:#d0cfe6;
+  --ok:#2a7d4f; --ok-bg:#eef8f1; --cambio:#fff3c4; --gris:#6b6f7a; --txt:#222;
+  --fuente:Verdana,'DejaVu Sans',Arial,sans-serif;
+  --mono:'DejaVu Sans Mono','Liberation Mono',Consolas,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--fuente);color:var(--txt);background:#fff;font-size:13px;line-height:1.45;padding:10px 12px 12px;overflow-x:hidden}
+.cab{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 0 8px}
+.cab label{font-size:12px;font-weight:700;color:var(--chrome-osc)}
+select{font-family:var(--fuente);font-size:12px;padding:2px 4px}
+.rejilla{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:12px;align-items:start}
+.codigo{border:1px solid var(--chrome-linea);border-radius:6px;background:#fafafe;padding:6px 0;font-family:var(--mono);font-size:12.5px;overflow-x:auto}
+.ln{display:flex;white-space:pre;padding:1px 8px 1px 0;border-left:4px solid transparent}
+.ln .n{flex:0 0 28px;text-align:right;color:#a3a6b3;padding-right:10px;user-select:none}
+.ln.act{background:#e3e1f5;border-left-color:var(--chrome)}
+.ln.act .n{color:var(--chrome);font-weight:700}
+.com{color:#7a7f8c}
+.panel h3{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--chrome-osc);margin:0 0 3px}
+table{border-collapse:collapse;width:100%;font-size:12.5px;margin:0 0 10px}
+td,th{border:1px solid var(--chrome-linea);padding:3px 8px;text-align:left}
+th{background:var(--chrome-tinte);font-size:11px}
+td.v{font-family:var(--mono)}
+tr.cambio td{background:var(--cambio)}
+.vacio{color:var(--gris);font-style:italic}
+.consola{background:#1f2130;color:#e8e8ef;border-radius:6px;font-family:var(--mono);font-size:12.5px;padding:6px 10px;min-height:60px;white-space:pre-wrap;word-break:break-word}
+.consola .nuevo{color:#ffd76a}
+.consola .ent{color:#8fd3ff}
+.msg{margin:10px 0 0;padding:7px 10px;border-radius:6px;font-size:12.5px;border:1px solid var(--ok);background:var(--ok-bg);color:#1d5636;min-height:44px}
+.botones{display:flex;gap:6px;align-items:center;margin-top:8px;flex-wrap:wrap}
+button{font-family:var(--fuente);font-size:12.5px;cursor:pointer;border:1px solid var(--chrome);background:#fff;color:var(--chrome);border-radius:5px;padding:4px 12px;min-height:30px}
+button.prin{background:var(--chrome);color:#fff}
+button:hover:not(:disabled){background:var(--chrome-osc);color:#fff}
+button:disabled{opacity:.35;cursor:not-allowed}
+button:focus-visible,select:focus-visible{outline:3px solid var(--chrome-osc);outline-offset:2px}
+.paso{margin-left:auto;font-size:11.5px;color:var(--gris)}
+@media (max-width:760px){.rejilla{grid-template-columns:1fr}.paso{margin-left:0;width:100%}}
+</style>
+</head>
+<body>
+<main class="wg">
+  <div class="cab" id="cab"></div>
+  <div class="rejilla">
+    <div class="codigo" id="codigo" aria-label="Programa"></div>
+    <div class="panel">
+      <h3>Variables</h3>
+      <table><thead><tr><th>nombre</th><th>valor</th></tr></thead><tbody id="vars"></tbody></table>
+      <h3>Pantalla</h3>
+      <div class="consola" id="consola" aria-live="polite"></div>
+    </div>
+  </div>
+  <div class="msg" id="msg"></div>
+  <div class="botones">
+    <button type="button" id="ini">⏮ Empezar de nuevo</button>
+    <button type="button" id="atr">◀ Atrás</button>
+    <button type="button" id="sig" class="prin">Siguiente línea ▶</button>
+    <span class="paso" id="paso"></span>
+  </div>
+</main>
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  function fmt(v){ if(typeof v==='string') return '"'+v+'"'; if(typeof v==='number'&&!Number.isInteger(v)) return String(v); return String(v); }
+  function num(v){ return String(v).replace('.',','); }
+  /* Cada generador devuelve {codigo:[líneas], pasos:[{l:línea(1..), v:{vars}, o:[salida], m:'mensaje', c:[vars cambiadas]}]} */
+  var P={};
+  P.variables={titulo:'Una variable que cambia',gen:function(){
+    var c=['puntos = 0','puntos = puntos + 10   # ahora puntos vale 10','puntos = puntos + 5    # ahora puntos vale 15','print(puntos)'];
+    var s=[]; var o=[];
+    s.push({l:1,v:{puntos:0},o:o.slice(),c:['puntos'],m:'Se crea la caja <b>puntos</b> y se guarda dentro un <b>0</b>.'});
+    s.push({l:2,v:{puntos:10},o:o.slice(),c:['puntos'],m:'Primero se calcula la derecha: <code>puntos + 10</code> = 0 + 10 = <b>10</b>. Después se guarda en <b>puntos</b>: el 0 desaparece.'});
+    s.push({l:3,v:{puntos:15},o:o.slice(),c:['puntos'],m:'Otra vez de derecha a izquierda: 10 + 5 = <b>15</b>. La caja guarda solo el último valor.'});
+    o.push('15'); s.push({l:4,v:{puntos:15},o:o.slice(),c:[],m:'<code>print</code> muestra en pantalla lo que hay en la caja: <b>15</b>.'});
+    return {codigo:c,pasos:s};
+  }};
+  P.condicional={titulo:'if / elif / else',entrada:{et:'Nota que escribe el usuario',ops:['3.5','5.5','6.5','7.5','9.5']},gen:function(e){
+    var n=parseFloat(e);
+    var c=['nota = float(input("Introduce una nota: "))','if nota < 5:','    print("Insuficiente")','elif nota < 6:','    print("Suficiente")','elif nota < 7:','    print("Bien")','elif nota < 9:','    print("Notable")','else:','    print("Sobresaliente")'];
+    var s=[],o=[],v={nota:n};
+    o.push('<span class="ent">Introduce una nota: '+e+'</span>');
+    s.push({l:1,v:v,o:o.slice(),c:['nota'],m:'El usuario escribe <b>'+e+'</b>. <code>float()</code> lo convierte en número decimal y se guarda en <b>nota</b>.'});
+    var conds=[[2,5,3,'Insuficiente'],[4,6,5,'Suficiente'],[6,7,7,'Bien'],[8,9,9,'Notable']];
+    for(var i=0;i<conds.length;i++){
+      var k=conds[i], ok=n<k[1];
+      s.push({l:k[0],v:v,o:o.slice(),c:[],m:'¿'+num(n)+' &lt; '+k[1]+'? → <b>'+(ok?'True':'False')+'</b>. '+(ok?'Se cumple: entra en esta rama.':'No se cumple: salta a la siguiente condición.')});
+      if(ok){ o.push(k[3]); s.push({l:k[2],v:v,o:o.slice(),c:[],m:'Muestra <b>'+k[3]+'</b>. Las demás ramas ya no se miran: en un <code>if/elif/else</code> solo se ejecuta <b>una</b>.'}); return {codigo:c,pasos:s}; }
+    }
+    s.push({l:10,v:v,o:o.slice(),c:[],m:'Ninguna condición se ha cumplido, así que entra en el <code>else</code>.'});
+    o.push('Sobresaliente'); s.push({l:11,v:v,o:o.slice(),c:[],m:'Muestra <b>Sobresaliente</b>.'});
+    return {codigo:c,pasos:s};
+  }};
+  P['for']={titulo:'Bucle for',entrada:{et:'Programa',ops:['range(1, 6)','bucles anidados']},gen:function(e){
+    var s=[],o=[];
+    if(e==='range(1, 6)'){
+      var c=['for numero in range(1, 6):','    print(numero)'];
+      for(var n=1;n<6;n++){
+        s.push({l:1,v:{numero:n},o:o.slice(),c:['numero'],m:(n===1?'<code>range(1, 6)</code> da los números 1, 2, 3, 4, 5. ':'')+'Vuelta '+n+': <b>numero</b> toma el valor <b>'+n+'</b>.'});
+        o.push(String(n)); s.push({l:2,v:{numero:n},o:o.slice(),c:[],m:'Se ejecuta lo que tiene sangría: muestra <b>'+n+'</b>.'});
+      }
+      s.push({l:1,v:{numero:5},o:o.slice(),c:[],m:'Ya no quedan números en el <code>range</code>: <b>el 6 no entra</b>. El bucle termina.'});
+      return {codigo:c,pasos:s};
+    }
+    var c2=['for fila in range(1, 4):','    for asterisco in range(fila):','        print("*", end="")','    print()'];
+    var linea='';
+    for(var f=1;f<4;f++){
+      s.push({l:1,v:{fila:f},o:o.concat(linea?[linea]:[]),c:['fila'],m:'Bucle de fuera: <b>fila</b> vale <b>'+f+'</b>. Ahora el de dentro se repetirá '+f+' '+(f===1?'vez':'veces')+'.'});
+      for(var a=0;a<f;a++){
+        var vv={fila:f,asterisco:a};
+        s.push({l:2,v:vv,o:o.concat(linea?[linea]:[]),c:['asterisco'],m:'Bucle de dentro: <code>range('+f+')</code> da '+(f===1?'solo el 0':'0 … '+(f-1))+'. <b>asterisco</b> vale <b>'+a+'</b>.'});
+        linea+='*'; s.push({l:3,v:vv,o:o.concat([linea]),c:[],m:'Pinta un <b>*</b>. <code>end=""</code> hace que no salte de línea.'});
+      }
+      o.push(linea); linea='';
+      s.push({l:4,v:{fila:f,asterisco:f-1},o:o.slice(),c:[],m:'El de dentro ha terminado: <code>print()</code> salta de línea.'});
+    }
+    s.push({l:1,v:{fila:3,asterisco:2},o:o.slice(),c:[],m:'<code>range(1, 4)</code> ya no da más números: fin.'});
+    return {codigo:c2,pasos:s};
+  }};
+  P['while']={titulo:'Bucle while',entrada:{et:'Programa',ops:['contar hasta 5','adivina el número']},gen:function(e){
+    var s=[],o=[];
+    if(e==='contar hasta 5'){
+      var c=['numero = 1','while numero <= 5:','    print(numero)','    numero = numero + 1'];
+      var n=1; s.push({l:1,v:{numero:1},o:[],c:['numero'],m:'<b>numero</b> empieza valiendo <b>1</b>.'});
+      while(true){
+        var ok=n<=5;
+        s.push({l:2,v:{numero:n},o:o.slice(),c:[],m:'¿'+n+' &lt;= 5? → <b>'+(ok?'True':'False')+'</b>. '+(ok?'Entra otra vez en el bucle.':'Ya no se cumple: el bucle termina.')});
+        if(!ok) break;
+        o.push(String(n)); s.push({l:3,v:{numero:n},o:o.slice(),c:[],m:'Muestra <b>'+n+'</b>.'});
+        n++; s.push({l:4,v:{numero:n},o:o.slice(),c:['numero'],m:'<b>numero</b> sube a <b>'+n+'</b>. Sin esta línea la condición se cumpliría siempre: bucle infinito.'});
+      }
+      return {codigo:c,pasos:s};
+    }
+    var c2=['import random','secreto = random.randint(1, 50)','while True:','    intento = int(input("Adivina el número (1-50): "))','    if intento == secreto:','        print("¡Has acertado!")','        break','    elif intento < secreto:','        print("Demasiado bajo")','    else:','        print("Demasiado alto")'];
+    var sec=23, intentos=[40,10,23], v={};
+    s.push({l:1,v:{},o:[],c:[],m:'Se carga la caja de herramientas <code>random</code>.'});
+    v={secreto:sec}; s.push({l:2,v:v,o:[],c:['secreto'],m:'Elige un número al azar. En esta simulación ha salido el <b>23</b> (el usuario no lo ve).'});
+    for(var i=0;i<intentos.length;i++){
+      var x=intentos[i];
+      s.push({l:3,v:v,o:o.slice(),c:[],m:'<code>while True</code>: la condición es siempre verdadera, así que vuelve a entrar. Solo saldrá con <code>break</code>.'});
+      v={secreto:sec,intento:x}; o.push('<span class="ent">Adivina el número (1-50): '+x+'</span>');
+      s.push({l:4,v:v,o:o.slice(),c:['intento'],m:'El usuario escribe <b>'+x+'</b>; <code>int()</code> lo convierte en número entero.'});
+      var eq=x===sec; s.push({l:5,v:v,o:o.slice(),c:[],m:'¿'+x+' == 23? → <b>'+(eq?'True':'False')+'</b>.'});
+      if(eq){ o.push('¡Has acertado!'); s.push({l:6,v:v,o:o.slice(),c:[],m:'Ha acertado.'}); s.push({l:7,v:v,o:o.slice(),c:[],m:'<code>break</code> rompe el bucle: el programa termina.'}); break; }
+      var lo=x<sec; s.push({l:8,v:v,o:o.slice(),c:[],m:'¿'+x+' &lt; 23? → <b>'+(lo?'True':'False')+'</b>.'});
+      if(lo){ o.push('Demasiado bajo'); s.push({l:9,v:v,o:o.slice(),c:[],m:'Muestra la pista y vuelve arriba, al <code>while</code>.'}); }
+      else { s.push({l:10,v:v,o:o.slice(),c:[],m:'No es igual ni menor, así que entra en el <code>else</code>.'}); o.push('Demasiado alto'); s.push({l:11,v:v,o:o.slice(),c:[],m:'Muestra la pista y vuelve arriba, al <code>while</code>.'}); }
+    }
+    return {codigo:c2,pasos:s};
+  }};
+
+  function modo(){
+    var cands=[window.name,(location.hash||'').slice(1),(new URLSearchParams(location.search)).get('modo')];
+    for(var i=0;i<cands.length;i++){ var m=(cands[i]||'').replace(/^modo=/,''); if(P[m]) return m; }
+    return 'variables';
+  }
+  var M=P[modo()], prog, k=0, prevVars={};
+  function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+  function pintaCodigo(){
+    $('codigo').innerHTML=prog.codigo.map(function(t,i){
+      var h=esc(t), j=h.indexOf('#'); if(j>=0) h=h.slice(0,j)+'<span class="com">'+h.slice(j)+'</span>';
+      return '<div class="ln" data-l="'+(i+1)+'"><span class="n">'+(i+1)+'</span><span>'+h+'</span></div>';}).join('');
+  }
+  function pinta(){
+    var st=k>0?prog.pasos[k-1]:null;
+    document.querySelectorAll('.ln').forEach(function(el){el.classList.toggle('act',!!st&&+el.dataset.l===st.l)});
+    var v=st?st.v:{}, ks=Object.keys(v);
+    $('vars').innerHTML=ks.length?ks.map(function(n){return '<tr class="'+(st.c.indexOf(n)>=0?'cambio':'')+'"><td>'+n+'</td><td class="v">'+esc(fmt(v[n]))+'</td></tr>'}).join(''):'<tr><td colspan="2" class="vacio">todavía ninguna</td></tr>';
+    var out=st?st.o:[], prev=k>1?prog.pasos[k-2].o.length:0;
+    $('consola').innerHTML=out.map(function(t,i){return i>=prev&&k>0&&out.length>prev?'<span class="nuevo">'+t+'</span>':t}).join('\n')||'&nbsp;';
+    $('msg').innerHTML=st?st.m:'Pulsa <b>Siguiente línea</b> para ejecutar el programa línea a línea. La línea marcada es la que se acaba de ejecutar.';
+    if(k===prog.pasos.length) $('msg').innerHTML+=' <b>Fin del programa.</b>';
+    $('paso').textContent='Paso '+k+' de '+prog.pasos.length;
+    $('atr').disabled=k===0; $('ini').disabled=k===0; $('sig').disabled=k===prog.pasos.length;
+  }
+  function carga(){ var e=M.entrada?$('ent').value:null; prog=M.gen(e); k=0; pintaCodigo(); pinta(); }
+  var cab='<label>'+M.titulo+'</label>';
+  if(M.entrada) cab+='<label for="ent" style="margin-left:auto;font-weight:400;color:#222">'+M.entrada.et+':</label><select id="ent">'+M.entrada.ops.map(function(o){return '<option>'+o+'</option>'}).join('')+'</select>';
+  $('cab').innerHTML=cab;
+  if(M.entrada) $('ent').addEventListener('change',carga);
+  $('sig').onclick=function(){if(k<prog.pasos.length){k++;pinta();}};
+  $('atr').onclick=function(){if(k>0){k--;pinta();}};
+  $('ini').onclick=function(){k=0;pinta();};
+  document.addEventListener('keydown',function(ev){ if(ev.key==='ArrowRight'){$('sig').click();} if(ev.key==='ArrowLeft'){$('atr').click();} });
+  carga();
+})();
+</script>
+</body>
+</html>

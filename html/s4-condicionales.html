@@ -89,10 +89,21 @@ if nota &lt; 5:
     print(&quot;Insuficiente&quot;)
 elif nota &lt; 6:
     print(&quot;Suficiente&quot;)
+elif nota &lt; 7:
+    print(&quot;Bien&quot;)
 elif nota &lt; 9:
     print(&quot;Notable&quot;)
 else:
     print(&quot;Sobresaliente&quot;)</code></pre>
+
+<div class="bloque bloque-actividad">
+  <p class="bloque-titulo">Pruébalo tú: ¿por qué rama va?</p>
+  <p>Elige la nota que escribe el usuario y sigue el programa línea a línea. Fíjate en qué condiciones llega a comprobar y en cuáles no.</p>
+<style>.cyr03-traza{width:100%;max-width:100%;border:1px solid #d0cfe6;border-radius:6px;height:720px;display:block}</style>
+<script>(function(){function ajusta(){var fs=document.querySelectorAll("iframe.cyr03-traza");for(var i=0;i<fs.length;i++){var f=fs[i];if(!f.getBoundingClientRect().width)continue;try{var d=f.contentDocument,a=d&&d.querySelector(".wg");if(!a)continue;var h=Math.ceil(a.getBoundingClientRect().height+24);if(h>200&&Math.abs(h-f.clientHeight)>4)f.style.height=h+"px";}catch(e){}}}document.addEventListener("click",function(){setTimeout(ajusta,120);setTimeout(ajusta,600);},true);window.addEventListener("load",function(){ajusta();setTimeout(ajusta,400);});window.addEventListener("resize",function(){setTimeout(ajusta,150);});setInterval(ajusta,1000);})();</script>
+<iframe class="cyr03-traza" name="condicional" src="../content/resources/widgets/widget_traza_python.html" title="Pruébalo tú: ¿por qué rama va?" width="100%" loading="lazy"></iframe>
+  <p>En cuanto una condición se cumple, se ejecuta su rama y el resto se salta. Por eso el orden de los <code>elif</code> importa.</p>
+</div>
 
 <h2>Condicionales anidados</h2>
 <p>Un condicional puede ir <strong>dentro</strong> de otro (anidado). Cada nivel lleva más sangría:</p>

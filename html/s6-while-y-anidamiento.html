@@ -83,6 +83,15 @@ while True:
         print(&quot;Demasiado alto&quot;)</code></pre>
 <p>Aquí has visto también <code>import random</code> (una «caja de herramientas» para números al azar) y <code>random.randint(a, b)</code> (elige un entero al azar entre <code>a</code> y <code>b</code>).</p>
 
+<div class="bloque bloque-actividad">
+  <p class="bloque-titulo">Pruébalo tú: mientras se cumpla…</p>
+  <p>Elige el programa y ejecútalo línea a línea. En el juego, el número secreto de la simulación es siempre el mismo para que puedas seguir la traza.</p>
+<style>.cyr03-traza{width:100%;max-width:100%;border:1px solid #d0cfe6;border-radius:6px;height:720px;display:block}</style>
+<script>(function(){function ajusta(){var fs=document.querySelectorAll("iframe.cyr03-traza");for(var i=0;i<fs.length;i++){var f=fs[i];if(!f.getBoundingClientRect().width)continue;try{var d=f.contentDocument,a=d&&d.querySelector(".wg");if(!a)continue;var h=Math.ceil(a.getBoundingClientRect().height+24);if(h>200&&Math.abs(h-f.clientHeight)>4)f.style.height=h+"px";}catch(e){}}}document.addEventListener("click",function(){setTimeout(ajusta,120);setTimeout(ajusta,600);},true);window.addEventListener("load",function(){ajusta();setTimeout(ajusta,400);});window.addEventListener("resize",function(){setTimeout(ajusta,150);});setInterval(ajusta,1000);})();</script>
+<iframe class="cyr03-traza" name="while" src="../content/resources/widgets/widget_traza_python.html" title="Pruébalo tú: mientras se cumpla…" width="100%" loading="lazy"></iframe>
+  <p>Observa que la condición del <code>while</code> se comprueba al principio de cada vuelta. Con <code>while True</code> la única salida es el <code>break</code>.</p>
+</div>
+
 <h2>Anidamiento</h2>
 <p>Como los <code>for</code>, los <code>while</code> y los <code>if</code> se pueden <strong>anidar</strong> (meter unos dentro de otros), siempre respetando la sangría de cada nivel.</p>
 
