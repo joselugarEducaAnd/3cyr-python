@@ -379,3 +379,25 @@ button.toggler:hover, button.toggler:focus,
     margin-bottom: 0 !important;
   }
 }
+
+/* ==========================================================================
+   Ajustes 2026-10-09 (petición de Pepe · DOCA-102)
+   Tablas de datos desplazables en pantallas estrechas.
+   - Una .tabla-datos que no cabe en la columna se CORTABA: la regla de arriba
+     le da overflow:hidden (para el radio de las esquinas) y las últimas
+     columnas quedaban fuera sin forma de verlas. Medido en la SdA 02 de
+     2.º TECI: la tabla resumen de ensayos (5 columnas) a 390 y 768 px, y la de
+     ventajas e inconvenientes del Brinell (2 columnas) ya a 390 px.
+   - Bajo 1024 px la tabla pasa a bloque con desplazamiento horizontal propio
+     (el mismo umbral que las fórmulas en bloque). La columna de contenido de
+     eXe con el menú abierto mide unos 390 px incluso con 768 px de pantalla.
+   - En escritorio no cambia nada (medido a 1025 y 1280 px: anchos idénticos).
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .exe-content table.tabla-datos {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
