@@ -10,6 +10,7 @@
    Autocontenido: sin CDN, sin dependencias, sin almacenamiento.
    Trazas precalculadas en JS: no hay intérprete de Python.
    Modo por página: name del iframe (o #modo / ?modo=): variables · condicional · for · while
+   2026-10-27 (DOCA-147): for + «sumar del 1 al 5» (acumulador); while: «contraseña» sustituye a «adivina el número».
    =========================================================== */
 :root{
   --chrome:#3b3a7a; --chrome-osc:#2a295a; --chrome-tinte:#ecebf5; --chrome-linea:#d0cfe6;
@@ -75,7 +76,7 @@ button:focus-visible,select:focus-visible{outline:3px solid var(--chrome-osc);ou
 (function(){
   var $=function(i){return document.getElementById(i)};
   function fmt(v){ if(typeof v==='string') return '"'+v+'"'; if(typeof v==='number'&&!Number.isInteger(v)) return String(v); return String(v); }
-  function num(v){ return String(v).replace('.',','); }
+  function num(v){ return String(v); }   // punto decimal, como en Python (DOCA-147)
   /* Cada generador devuelve {codigo:[líneas], pasos:[{l:línea(1..), v:{vars}, o:[salida], m:'mensaje', c:[vars cambiadas]}]} */
   var P={};
   P.variables={titulo:'Una variable que cambia',gen:function(){
@@ -103,8 +104,20 @@ button:focus-visible,select:focus-visible{outline:3px solid var(--chrome-osc);ou
     o.push('Sobresaliente'); s.push({l:11,v:v,o:o.slice(),c:[],m:'Muestra <b>Sobresaliente</b>.'});
     return {codigo:c,pasos:s};
   }};
-  P['for']={titulo:'Bucle for',entrada:{et:'Programa',ops:['range(1, 6)','bucles anidados']},gen:function(e){
+  P['for']={titulo:'Bucle for',entrada:{et:'Programa',ops:['range(1, 6)','sumar del 1 al 5','bucles anidados']},gen:function(e){
     var s=[],o=[];
+    if(e==='sumar del 1 al 5'){
+      var c=['total = 0','for n in range(1, 6):','    total = total + n','print("La suma es", total)'];
+      var t=0; s.push({l:1,v:{total:0},o:[],c:['total'],m:'La caja <b>total</b> empieza en <b>0</b>, ANTES del bucle.'});
+      for(var n=1;n<6;n++){
+        s.push({l:2,v:{total:t,n:n},o:[],c:['n'],m:'Vuelta '+n+': <b>n</b> vale <b>'+n+'</b>.'});
+        var antes=t; t=t+n;
+        s.push({l:3,v:{total:t,n:n},o:[],c:['total'],m:'Se calcula la derecha: <code>total + n</code> = '+antes+' + '+n+' = <b>'+t+'</b>, y se guarda en <b>total</b>.'});
+      }
+      s.push({l:2,v:{total:t,n:5},o:[],c:[],m:'El <code>range</code> no da más números: el bucle termina.'});
+      o.push('La suma es '+t); s.push({l:4,v:{total:t,n:5},o:o.slice(),c:[],m:'Sin sangría: se ejecuta <b>una vez</b>, al final, y muestra la suma completa: <b>'+t+'</b>.'});
+      return {codigo:c,pasos:s};
+    }
     if(e==='range(1, 6)'){
       var c=['for numero in range(1, 6):','    print(numero)'];
       for(var n=1;n<6;n++){
@@ -129,7 +142,7 @@ button:focus-visible,select:focus-visible{outline:3px solid var(--chrome-osc);ou
     s.push({l:1,v:{fila:3,asterisco:2},o:o.slice(),c:[],m:'<code>range(1, 4)</code> ya no da más números: fin.'});
     return {codigo:c2,pasos:s};
   }};
-  P['while']={titulo:'Bucle while',entrada:{et:'Programa',ops:['contar hasta 5','adivina el número']},gen:function(e){
+  P['while']={titulo:'Bucle while',entrada:{et:'Programa',ops:['contar hasta 5','contraseña']},gen:function(e){
     var s=[],o=[];
     if(e==='contar hasta 5'){
       var c=['numero = 1','while numero <= 5:','    print(numero)','    numero = numero + 1'];
@@ -143,20 +156,19 @@ button:focus-visible,select:focus-visible{outline:3px solid var(--chrome-osc);ou
       }
       return {codigo:c,pasos:s};
     }
-    var c2=['import random','secreto = random.randint(1, 50)','while True:','    intento = int(input("Adivina el número (1-50): "))','    if intento == secreto:','        print("¡Has acertado!")','        break','    elif intento < secreto:','        print("Demasiado bajo")','    else:','        print("Demasiado alto")'];
-    var sec=23, intentos=[40,10,23], v={};
-    s.push({l:1,v:{},o:[],c:[],m:'Se carga la caja de herramientas <code>random</code>.'});
-    v={secreto:sec}; s.push({l:2,v:v,o:[],c:['secreto'],m:'Elige un número al azar. En esta simulación ha salido el <b>23</b> (el usuario no lo ve).'});
-    for(var i=0;i<intentos.length;i++){
-      var x=intentos[i];
-      s.push({l:3,v:v,o:o.slice(),c:[],m:'<code>while True</code>: la condición es siempre verdadera, así que vuelve a entrar. Solo saldrá con <code>break</code>.'});
-      v={secreto:sec,intento:x}; o.push('<span class="ent">Adivina el número (1-50): '+x+'</span>');
-      s.push({l:4,v:v,o:o.slice(),c:['intento'],m:'El usuario escribe <b>'+x+'</b>; <code>int()</code> lo convierte en número entero.'});
-      var eq=x===sec; s.push({l:5,v:v,o:o.slice(),c:[],m:'¿'+x+' == 23? → <b>'+(eq?'True':'False')+'</b>.'});
-      if(eq){ o.push('¡Has acertado!'); s.push({l:6,v:v,o:o.slice(),c:[],m:'Ha acertado.'}); s.push({l:7,v:v,o:o.slice(),c:[],m:'<code>break</code> rompe el bucle: el programa termina.'}); break; }
-      var lo=x<sec; s.push({l:8,v:v,o:o.slice(),c:[],m:'¿'+x+' &lt; 23? → <b>'+(lo?'True':'False')+'</b>.'});
-      if(lo){ o.push('Demasiado bajo'); s.push({l:9,v:v,o:o.slice(),c:[],m:'Muestra la pista y vuelve arriba, al <code>while</code>.'}); }
-      else { s.push({l:10,v:v,o:o.slice(),c:[],m:'No es igual ni menor, así que entra en el <code>else</code>.'}); o.push('Demasiado alto'); s.push({l:11,v:v,o:o.slice(),c:[],m:'Muestra la pista y vuelve arriba, al <code>while</code>.'}); }
+    var c2=['clave = "python"','intentos = 0','while True:','    escrita = input("Contraseña: ")','    intentos = intentos + 1','    if escrita == clave:','        print("Correcta. Intentos:", intentos)','        break','    print("Incorrecta, prueba otra vez")'];
+    var resp=['hola','1234','python'], v={};
+    v={clave:'python'}; s.push({l:1,v:v,o:[],c:['clave'],m:'Se guarda la contraseña buena en <b>clave</b>.'});
+    v={clave:'python',intentos:0}; s.push({l:2,v:v,o:[],c:['intentos'],m:'El contador <b>intentos</b> empieza en <b>0</b>, antes del bucle.'});
+    for(var i=0;i<resp.length;i++){
+      var x=resp[i], n=i+1;
+      s.push({l:3,v:v,o:o.slice(),c:[],m:'<code>while True</code>: la condición se cumple siempre, así que entra. Solo saldrá con <code>break</code>.'});
+      v={clave:'python',intentos:n-1,escrita:x}; o.push('<span class="ent">Contraseña: '+x+'</span>');
+      s.push({l:4,v:v,o:o.slice(),c:['escrita'],m:'El usuario escribe <b>'+x+'</b> y se guarda en <b>escrita</b>.'});
+      v={clave:'python',intentos:n,escrita:x}; s.push({l:5,v:v,o:o.slice(),c:['intentos'],m:'El contador suma 1: <b>intentos</b> vale <b>'+n+'</b>.'});
+      var eq=(x==='python'); s.push({l:6,v:v,o:o.slice(),c:[],m:'¿"'+x+'" == "python"? → <b>'+(eq?'True':'False')+'</b>.'});
+      if(eq){ o.push('Correcta. Intentos: '+n); s.push({l:7,v:v,o:o.slice(),c:[],m:'Muestra el mensaje con el contador.'}); s.push({l:8,v:v,o:o.slice(),c:[],m:'<code>break</code> rompe el bucle: el programa termina.'}); break; }
+      o.push('Incorrecta, prueba otra vez'); s.push({l:9,v:v,o:o.slice(),c:[],m:'No ha acertado: muestra el aviso y vuelve arriba, al <code>while</code>.'});
     }
     return {codigo:c2,pasos:s};
   }};

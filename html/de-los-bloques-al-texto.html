@@ -4,15 +4,14 @@
 <meta charset="utf-8">
 <meta name="generator" content="eXeLearning v4.0.5">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>S1 · De los bloques al texto | Programa en serio: de los bloques al texto con Python</title>
+<title>De los bloques al texto | Programa en serio: de los bloques al texto con Python</title>
 <link rel="icon" type="image/x-icon" href="../libs/favicon.ico">
 <meta name="description" content="Unidad de introduccion a la programacion textual con Python para 3.o de ESO (Computacion y Robotica). SdA «Programa en serio: de los bloques al texto con Python».">
 <script>document.querySelector("html").classList.add("js");</script><script src="../libs/jquery/jquery.min.js"> </script><script src="../libs/common_i18n.js"> </script><script src="../libs/common.js"> </script><script src="../libs/exe_export.js"> </script><script src="../libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
 <script src="../idevices/text/text.js"></script><link rel="stylesheet" href="../idevices/text/text.css">
 <script src="../idevices/relate/relate.js"></script><link rel="stylesheet" href="../idevices/relate/relate.css">
 <script src="../libs/jquery-ui/jquery-ui.min.js"> </script>
-<link rel="stylesheet" href="../content/css/base.css"><script src="../theme/style.js"> </script>
-<script src="../theme/zzz-majuelo.js"> </script><link rel="stylesheet" href="../theme/style.css"><link rel="stylesheet" href="../theme/zzz-majuelo.css">
+<link rel="stylesheet" href="../content/css/base.css"><script src="../theme/style.js"> </script><script src="../theme/zzz-majuelo.js"> </script><link rel="stylesheet" href="../theme/style.css"><link rel="stylesheet" href="../theme/zzz-majuelo.css">
 </head>
 <body class="exe-export exe-web-site">
 <script>document.body.className+=" js"</script>
@@ -20,30 +19,32 @@
 <ul>
 <li> <a href="../index.html" class="main-node no-ch">Python · Inicio</a>
 </li>
-<li class="active"> <a href="../html/s1-de-los-bloques-al-texto.html" class="active no-ch">S1 · De los bloques al texto</a>
+<li class="active"> <a href="../html/de-los-bloques-al-texto.html" class="active no-ch">De los bloques al texto</a>
 </li>
-<li> <a href="../html/s2-datos-operaciones-y-variables.html" class="no-ch">S2 · Datos, operaciones y variables</a>
+<li> <a href="../html/datos-operaciones-y-variables.html" class="no-ch">Datos, operaciones y variables</a>
 </li>
-<li> <a href="../html/s3-entrada-y-salida.html" class="no-ch">S3 · Entrada y salida</a>
+<li> <a href="../html/entrada-y-salida.html" class="no-ch">Entrada y salida</a>
 </li>
-<li> <a href="../html/s4-condicionales.html" class="no-ch">S4 · Condicionales</a>
+<li> <a href="../html/condicionales.html" class="no-ch">Condicionales</a>
 </li>
-<li> <a href="../html/s5-bucles-for.html" class="no-ch">S5 · Bucles for</a>
+<li> <a href="../html/bucles-for.html" class="no-ch">Bucles for</a>
 </li>
-<li> <a href="../html/s6-while-y-anidamiento.html" class="no-ch">S6 · While y anidamiento</a>
+<li> <a href="../html/bucles-while-y-anidamiento.html" class="no-ch">Bucles while y anidamiento</a>
 </li>
-<li> <a href="../html/s7-funciones-y-cadenas.html" class="no-ch">S7 · Funciones y cadenas</a>
+<li> <a href="../html/funciones-y-cadenas.html" class="no-ch">Funciones y cadenas</a>
 </li>
-<li> <a href="../html/s8-reto-final.html" class="no-ch">S8 · Reto final</a>
+<li> <a href="../html/programar-sin-internet-thonny.html" class="no-ch">Programar sin internet: Thonny</a>
+</li>
+<li> <a href="../html/reto-final.html" class="no-ch">Reto final</a>
 </li>
 <li> <a href="../html/chuleta-de-python.html" class="no-ch">Chuleta de Python</a>
 </li>
 </ul>
 </nav><main id="page-py-01" class="page"> 
-<header class="main-header"> <p class="page-counter"> <span class="page-counter-label">Página </span><span class="page-counter-content"> <strong class="page-counter-current-page">2</strong><span class="page-counter-sep">/</span><strong class="page-counter-total">10</strong></span></p>
+<header class="main-header"> <p class="page-counter"> <span class="page-counter-label">Página </span><span class="page-counter-content"> <strong class="page-counter-current-page">2</strong><span class="page-counter-sep">/</span><strong class="page-counter-total">11</strong></span></p>
 
 <div class="package-header"><p class="package-title">Programa en serio: de los bloques al texto con Python</p></div>
-<div class="page-header"><h1 class="page-title">S1 · De los bloques al texto</h1></div>
+<div class="page-header"><h1 class="page-title">De los bloques al texto</h1></div>
 </header><div id="page-content-page-py-01" class="page-content">
 <article id="block-py-01" class="box no-header">
 <header class="box-head no-icon">
@@ -56,7 +57,7 @@
 <div class="bloque bloque-teoria">
   <p class="bloque-titulo">Lo mismo que ya sabes, pero escrito</p>
   <p>Cuando programabas con <strong>bloques</strong> (Scratch), en realidad ya estabas dando <strong>órdenes ordenadas</strong> a un ordenador: mostrar un mensaje, preguntar algo, guardar una respuesta, repetir, decidir… A esa lista de órdenes ordenadas la llamamos <strong>algoritmo</strong>.</p>
-  <p>Programar en <strong>Python</strong> es exactamente lo mismo, pero en vez de <em>arrastrar bloques</em>, <strong>escribes las órdenes con el teclado</strong>. En esta sesión vas a ver <strong>el mismo algoritmo</strong> en bloques y en Python, uno al lado del otro, para que compruebes que ya sabes más de lo que crees.</p>
+  <p>Programar en <strong>Python</strong> es exactamente lo mismo, pero en vez de <em>arrastrar bloques</em>, <strong>escribes las órdenes con el teclado</strong>. En esta página vas a ver <strong>el mismo algoritmo</strong> en bloques y en Python, uno al lado del otro, para que compruebes que ya sabes más de lo que crees.</p>
 </div>
 
 <h2>El mismo algoritmo, orden a orden</h2>
@@ -92,7 +93,7 @@ print(&quot;¡Hola, &quot; + nombre + &quot;!&quot;)</code></pre>
   <p class="bloque-titulo">3 cosas nuevas que trae el texto</p>
   <ul>
     <li><strong>Se escribe, no se arrastra:</strong> hay que teclear las órdenes con cuidado (una coma o un paréntesis mal puestos dan error).</li>
-    <li><strong>La sangría manda:</strong> lo que en bloques quedaba «dentro» de un <em>repetir</em> o un <em>si</em>, en Python se marca dejando un <strong>espacio a la izquierda</strong> (sangría). Es como encajar el bloque dentro.</li>
+    <li><strong>La sangría manda:</strong> lo que en bloques quedaba «dentro» de un <em>repetir</em> o un <em>si</em>, en Python se escribe empezando la línea <strong>4 espacios más adentro</strong>. Eso se llama <strong>sangría</strong>, y es como encajar el bloque dentro. No tienes que contar espacios: al pulsar <kbd>Enter</kbd> después de los dos puntos, el editor los pone solo. Para volver a la izquierda (por ejemplo, para escribir el <code>else:</code> o una línea que ya no va dentro), bórralos con la tecla de retroceso <kbd>⌫</kbd>.</li>
     <li><strong>Los dos puntos <code>:</code></strong> avisan de que a continuación viene un bloque con sangría (lo verás en <code>for</code>, <code>if</code>, <code>while</code>…).</li>
   </ul>
 </div>
@@ -100,11 +101,11 @@ print(&quot;¡Hola, &quot; + nombre + &quot;!&quot;)</code></pre>
 <h2>Tu editor de Python</h2>
 <div class="bloque bloque-resuelto">
   <p class="bloque-titulo">online-python.com (sin instalar nada, también en casa)</p>
-  <p>Abre <a href="https://www.online-python.com/" target="_blank" rel="noopener">online-python.com</a>. Escribe el código en el recuadro grande y pulsa <strong>«Run»</strong>: el resultado sale abajo, en la consola. Para guardar, descarga el archivo <code>.py</code>.</p>
+  <p>Abre <a href="https://www.online-python.com/" target="_blank" rel="noopener">online-python.com</a>. Escribe el código en el editor y pulsa el botón verde <strong>Run</strong>: el resultado sale abajo, en la zona <strong>TERMINAL</strong>. Para guardar, pulsa el disquete y escribe el nombre del archivo. Las capturas de cada paso están en la página de <em>Inicio</em>.</p>
 </div>
 
 <h2>Tu primer programa: «Hola, mundo»</h2>
-<p>Es tradición que el primer programa en cualquier lenguaje muestre el mensaje «Hola, mundo». En Python se hace con la función <code>print()</code>. Lo que quieras mostrar va <strong>entre comillas</strong> y <strong>dentro de los paréntesis</strong>:</p>
+<p>Es tradición que el primer programa en cualquier lenguaje muestre el mensaje «Hola, mundo». En Python se hace con <code>print()</code>, que es una <strong>orden ya preparada</strong> de Python (a estas órdenes se les llama <strong>funciones</strong>, y llevan siempre paréntesis). Lo que quieras mostrar va <strong>entre comillas</strong> y <strong>dentro de los paréntesis</strong>:</p>
 <pre><code>print(&quot;¡Hola, mundo!&quot;)</code></pre>
 <p>Puedes usar comillas dobles <code>"</code> o simples <code>'</code>, pero no las mezcles en el mismo texto.</p>
 
@@ -113,21 +114,37 @@ print(&quot;¡Hola, &quot; + nombre + &quot;!&quot;)</code></pre>
 <pre><code># Este es mi primer programa
 print(&quot;¡Hola, mundo!&quot;)   # esto también es un comentario</code></pre>
 
+<h2>Cuando sale un error</h2>
+<p>Al escribir, te vas a equivocar: le pasa a todo el mundo. Python no se enfada; te dice <strong>en qué línea</strong> se ha atascado y <strong>qué le pasa</strong>, en inglés. Aquí falta la comilla que cierra el texto:</p>
+<p style="text-align:center"><img src="../content/resources/py_err_syntax.png" alt="Programa print con la comilla final olvidada; la TERMINAL muestra en rojo SyntaxError: unterminated string literal (detected at line 1)" style="max-width:900px;width:100%;height:auto"><a class="ampliar-fig" href="../content/resources/py_err_syntax.png" target="_blank" rel="noopener" style="display:block;width:max-content;margin:.25rem auto .75rem;font-size:.85em">Ampliar</a></p>
+<div class="bloque bloque-nota">
+  <p class="bloque-titulo">Tres pasos para arreglar un error</p>
+  <ol>
+    <li><strong>Busca el número de línea</strong> (<code>line 1</code>, marca 1). El editor también pone una ✗ roja en esa línea (a veces, también en la siguiente).</li>
+    <li><strong>Mira dónde apuntan las flechitas</strong> <code>^</code> (marca 2): el problema está ahí o justo antes.</li>
+    <li><strong>Lee la última línea</strong> (marca 3). <code>SyntaxError</code> quiere decir «está mal escrito». Revisa comillas, paréntesis y dos puntos de esa línea y de la anterior.</li>
+  </ol>
+  <p>En cada página verás los errores típicos de lo que estás aprendiendo. Los tienes todos juntos en la ficha <a href="../content/resources/errores_frecuentes_python.pdf" target="_blank" rel="noopener">Errores frecuentes (PDF)</a>.</p>
+</div>
+
 <div class="bloque bloque-actividad">
   <p class="bloque-titulo">Tarea 1 · Hola, mundo</p>
   <ol>
-    <li>Abre <a href="https://www.online-python.com/" target="_blank" rel="noopener">online-python.com</a>.</li>
-    <li>Escribe un programa que muestre por pantalla la frase <strong>¡Hola, mundo!</strong> con <code>print()</code>.</li>
-    <li>Añade en la primera línea un <strong>comentario</strong> con el nombre de la tarea.</li>
-    <li>Pulsa <strong>«Run»</strong> y comprueba que aparece la frase en la consola.</li>
-    <li>Descarga el archivo, ponle de nombre <code>tarea1.py</code> y súbelo a la tarea de <strong>Google Classroom</strong>.</li>
+    <li>Abre <a href="https://www.online-python.com/" target="_blank" rel="noopener">online-python.com</a> y borra el programa de ejemplo que trae.</li>
+    <li>En la primera línea escribe un <strong>comentario</strong> con el nombre de la tarea: <code># Tarea 1: Hola, mundo</code>.</li>
+    <li>En la segunda, un <code>print()</code> que muestre la frase <strong>¡Hola, mundo!</strong></li>
+    <li>Pulsa <strong>Run</strong>.</li>
+    <li>Guárdalo con el disquete con el nombre <code>tarea1.py</code> y súbelo a la tarea de <strong>Google Classroom</strong>.</li>
   </ol>
-  <p><strong>Amplía (opcional):</strong> añade una segunda línea que muestre otra frase tuya.</p>
+  <p><strong>Tu programa debe mostrar</strong> en la TERMINAL:</p>
+<pre><code>¡Hola, mundo!</code></pre>
+  <p><strong>Está bien si…</strong> ☐ la primera línea empieza por <code>#</code> ☐ sale exactamente la frase, con sus signos ¡ ! ☐ el archivo se llama <code>tarea1.py</code>.</p>
+  <p><strong>Amplía (opcional):</strong> añade una tercera línea que muestre otra frase tuya.</p>
 </div>
 
 <div class="bloque bloque-nota">
   <p class="bloque-titulo">Comprueba lo que has aprendido</p>
-  <p>Al final de la sesión encontrarás una <strong>autocomprobación</strong> para repasar la correspondencia bloques ↔ Python. No cuenta para nota: sirve para que veas si lo has pillado.</p>
+  <p>Al final de esta página tienes una <strong>autocomprobación</strong> para repasar la correspondencia bloques ↔ Python. No cuenta para nota: sirve para que veas si lo has pillado.</p>
 </div>
 
 </div>
@@ -146,7 +163,7 @@ print(&quot;¡Hola, mundo!&quot;)   # esto también es un comentario</code></pre
 </article>
 </div></main><div class="nav-buttons">
 <a href="../index.html" title="Anterior" class="nav-button nav-button-left"><span>Anterior</span></a>
-<a href="../html/s2-datos-operaciones-y-variables.html" title="Siguiente" class="nav-button nav-button-right"><span>Siguiente</span></a>
+<a href="../html/datos-operaciones-y-variables.html" title="Siguiente" class="nav-button nav-button-right"><span>Siguiente</span></a>
 </div>
 <footer id="siteFooter"><div id="siteFooterContent"> <div id="packageLicense" class=""> <p> <span class="license-label">Licencia: </span><span class="license">creative commons: attribution - share alike</span></p>
 </div>

@@ -4,14 +4,13 @@
 <meta charset="utf-8">
 <meta name="generator" content="eXeLearning v4.0.5">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>S3 · Entrada y salida | Programa en serio: de los bloques al texto con Python</title>
+<title>Entrada y salida | Programa en serio: de los bloques al texto con Python</title>
 <link rel="icon" type="image/x-icon" href="../libs/favicon.ico">
 <meta name="description" content="Unidad de introduccion a la programacion textual con Python para 3.o de ESO (Computacion y Robotica). SdA «Programa en serio: de los bloques al texto con Python».">
 <script>document.querySelector("html").classList.add("js");</script><script src="../libs/jquery/jquery.min.js"> </script><script src="../libs/common_i18n.js"> </script><script src="../libs/common.js"> </script><script src="../libs/exe_export.js"> </script><script src="../libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
 <script src="../idevices/text/text.js"></script><link rel="stylesheet" href="../idevices/text/text.css">
 <script src="../idevices/trueorfalse/trueorfalse.js"></script><link rel="stylesheet" href="../idevices/trueorfalse/trueorfalse.css">
-<link rel="stylesheet" href="../content/css/base.css"><script src="../theme/style.js"> </script>
-<script src="../theme/zzz-majuelo.js"> </script><link rel="stylesheet" href="../theme/style.css"><link rel="stylesheet" href="../theme/zzz-majuelo.css">
+<link rel="stylesheet" href="../content/css/base.css"><script src="../theme/style.js"> </script><script src="../theme/zzz-majuelo.js"> </script><link rel="stylesheet" href="../theme/style.css"><link rel="stylesheet" href="../theme/zzz-majuelo.css">
 </head>
 <body class="exe-export exe-web-site">
 <script>document.body.className+=" js"</script>
@@ -19,30 +18,32 @@
 <ul>
 <li> <a href="../index.html" class="main-node no-ch">Python · Inicio</a>
 </li>
-<li> <a href="../html/s1-de-los-bloques-al-texto.html" class="no-ch">S1 · De los bloques al texto</a>
+<li> <a href="../html/de-los-bloques-al-texto.html" class="no-ch">De los bloques al texto</a>
 </li>
-<li> <a href="../html/s2-datos-operaciones-y-variables.html" class="no-ch">S2 · Datos, operaciones y variables</a>
+<li> <a href="../html/datos-operaciones-y-variables.html" class="no-ch">Datos, operaciones y variables</a>
 </li>
-<li class="active"> <a href="../html/s3-entrada-y-salida.html" class="active no-ch">S3 · Entrada y salida</a>
+<li class="active"> <a href="../html/entrada-y-salida.html" class="active no-ch">Entrada y salida</a>
 </li>
-<li> <a href="../html/s4-condicionales.html" class="no-ch">S4 · Condicionales</a>
+<li> <a href="../html/condicionales.html" class="no-ch">Condicionales</a>
 </li>
-<li> <a href="../html/s5-bucles-for.html" class="no-ch">S5 · Bucles for</a>
+<li> <a href="../html/bucles-for.html" class="no-ch">Bucles for</a>
 </li>
-<li> <a href="../html/s6-while-y-anidamiento.html" class="no-ch">S6 · While y anidamiento</a>
+<li> <a href="../html/bucles-while-y-anidamiento.html" class="no-ch">Bucles while y anidamiento</a>
 </li>
-<li> <a href="../html/s7-funciones-y-cadenas.html" class="no-ch">S7 · Funciones y cadenas</a>
+<li> <a href="../html/funciones-y-cadenas.html" class="no-ch">Funciones y cadenas</a>
 </li>
-<li> <a href="../html/s8-reto-final.html" class="no-ch">S8 · Reto final</a>
+<li> <a href="../html/programar-sin-internet-thonny.html" class="no-ch">Programar sin internet: Thonny</a>
+</li>
+<li> <a href="../html/reto-final.html" class="no-ch">Reto final</a>
 </li>
 <li> <a href="../html/chuleta-de-python.html" class="no-ch">Chuleta de Python</a>
 </li>
 </ul>
 </nav><main id="page-py-03" class="page"> 
-<header class="main-header"> <p class="page-counter"> <span class="page-counter-label">Página </span><span class="page-counter-content"> <strong class="page-counter-current-page">4</strong><span class="page-counter-sep">/</span><strong class="page-counter-total">10</strong></span></p>
+<header class="main-header"> <p class="page-counter"> <span class="page-counter-label">Página </span><span class="page-counter-content"> <strong class="page-counter-current-page">4</strong><span class="page-counter-sep">/</span><strong class="page-counter-total">11</strong></span></p>
 
 <div class="package-header"><p class="package-title">Programa en serio: de los bloques al texto con Python</p></div>
-<div class="page-header"><h1 class="page-title">S3 · Entrada y salida</h1></div>
+<div class="page-header"><h1 class="page-title">Entrada y salida</h1></div>
 </header><div id="page-content-page-py-03" class="page-content">
 <article id="block-py-03" class="box no-header">
 <header class="box-head no-icon">
@@ -54,7 +55,7 @@
 <style>.exe-content{--chrome:#3b3a7a;--chrome-osc:#2a295a;--chrome-tinte:#ecebf5;--chrome-linea:#d0cfe6;}</style>
 <div class="bloque bloque-teoria">
   <p class="bloque-titulo">Hablar con el usuario</p>
-  <p>Un programa se vuelve interesante cuando <strong>habla</strong> con quien lo usa: le <strong>muestra</strong> información y le <strong>pide</strong> datos. Para eso tenemos dos funciones: <code>print()</code> (mostrar) e <code>input()</code> (pedir).</p>
+  <p>Un programa se vuelve interesante cuando <strong>habla</strong> con quien lo usa: le <strong>muestra</strong> información y le <strong>pide</strong> datos. Para eso tenemos dos órdenes de Python (funciones): <code>print()</code> (mostrar) e <code>input()</code> (pedir).</p>
 </div>
 
 <h2>Mostrar información: <code>print()</code></h2>
@@ -69,45 +70,75 @@
 <pre><code>print(1, 2, 3, sep=&quot; + &quot;)     # Muestra:  1 + 2 + 3
 print(&quot;Hola,&quot;, end=&quot; &quot;)
 print(&quot;mundo&quot;)                # Muestra:  Hola, mundo  (en la misma línea)</code></pre>
-<p>El código especial <code>\n</code> dentro de un texto añade un <strong>salto de línea</strong>.</p>
+<p>El código especial <code>\n</code> dentro de un texto añade un <strong>salto de línea</strong>:</p>
+<pre><code>print(&quot;Uno\nDos&quot;)    # Muestra Uno y, debajo, Dos</code></pre>
 
 <h2>Pedir datos: <code>input()</code></h2>
-<p>La función <code>input()</code> muestra un mensaje, <strong>espera</strong> a que el usuario escriba algo y pulse Enter, y <strong>devuelve</strong> lo que ha escrito. Lo normal es guardarlo en una variable:</p>
+<p><code>input()</code> muestra un mensaje, <strong>espera</strong> a que el usuario escriba algo y pulse <kbd>Enter</kbd>, y te <strong>entrega</strong> lo que ha escrito para que lo guardes en una variable (se dice que lo <strong>devuelve</strong>):</p>
 <pre><code>nombre = input(&quot;¿Cómo te llamas? &quot;)
-print(&quot;Hola,&quot;, nombre)</code></pre>
+print(&quot;¡Hola, &quot; + nombre + &quot;!&quot;)</code></pre>
+<p>Al pulsar <strong>Run</strong>, el programa se para y espera. Haz clic en la TERMINAL, escribe tu respuesta y pulsa <kbd>Enter</kbd> (marca 1):</p>
+<p style="text-align:center"><img src="../content/resources/py_op_input.png" alt="Programa que pregunta el nombre; en la TERMINAL el usuario ha escrito Alex y el programa responde ¡Hola, Alex!" style="max-width:900px;width:100%;height:auto"><a class="ampliar-fig" href="../content/resources/py_op_input.png" target="_blank" rel="noopener" style="display:block;width:max-content;margin:.25rem auto .75rem;font-size:.85em">Ampliar</a></p>
 
 <div class="bloque bloque-nota">
-  <p class="bloque-titulo">¡Error muy común!</p>
-  <p><code>input()</code> siempre devuelve <strong>texto</strong>, aunque escribas un número. Si necesitas operar con él, tienes que <strong>convertirlo</strong>:</p>
+  <p class="bloque-titulo">¡Error muy común! <code>input()</code> siempre da texto</p>
+  <p>Aunque escribas un número, <code>input()</code> te da <strong>texto</strong>. Mira lo que pasa si escribes <code>2</code> aquí:</p>
+  <pre><code>a = input(&quot;Escribe un número: &quot;)
+print(a + a)          # Muestra: 22   (ha pegado dos textos, no ha sumado)</code></pre>
+  <p>Para hacer cuentas con lo que escribe el usuario, primero hay que <strong>convertirlo</strong> en número:</p>
   <ul>
-    <li><code>int(texto)</code> → lo convierte en número <strong>entero</strong>.</li>
-    <li><code>float(texto)</code> → lo convierte en número <strong>decimal</strong>.</li>
+    <li><code>int(…)</code> → lo convierte en número <strong>entero</strong>.</li>
+    <li><code>float(…)</code> → lo convierte en número <strong>decimal</strong>.</li>
   </ul>
   <pre><code>edad = int(input(&quot;¿Cuántos años tienes? &quot;))
 print(&quot;El año que viene tendrás&quot;, edad + 1)</code></pre>
+  <p>La primera línea se lee de dentro afuera: <code>input()</code> pregunta, <code>int()</code> convierte la respuesta en número y <code>=</code> lo guarda en <code>edad</code>. <strong>Solo se convierten los números.</strong> Un nombre es texto y se queda como está.</p>
 </div>
+
+<h2>Los dos errores de esta página</h2>
+<p><strong>Sumar texto y número.</strong> Si olvidas convertir y haces una cuenta, Python se queja con un <code>TypeError</code> («tipo equivocado»): «solo puedo unir texto con texto». La marca 1 es lo que escribió el usuario; la 2, la última línea, que dice el tipo de error.</p>
+<p style="text-align:center"><img src="../content/resources/py_err_type.png" alt="Error TypeError: can only concatenate str (not int) to str al hacer a + 1 con a leído con input" style="max-width:900px;width:100%;height:auto"><a class="ampliar-fig" href="../content/resources/py_err_type.png" target="_blank" rel="noopener" style="display:block;width:max-content;margin:.25rem auto .75rem;font-size:.85em">Ampliar</a></p>
+<p><strong>Convertir algo que no es un número.</strong> Si el programa usa <code>int()</code> y el usuario escribe una palabra, sale un <code>ValueError</code> («valor que no sirve»): no puede convertir <code>quince</code> en número. El programa está bien: hay que volver a ejecutarlo y escribir <code>15</code>. Marca 1: lo que se escribió; marca 2: el tipo de error.</p>
+<p style="text-align:center"><img src="../content/resources/py_err_value.png" alt="Error ValueError: invalid literal for int() with base 10: quince al escribir una palabra donde se esperaba un número" style="max-width:900px;width:100%;height:auto"><a class="ampliar-fig" href="../content/resources/py_err_value.png" target="_blank" rel="noopener" style="display:block;width:max-content;margin:.25rem auto .75rem;font-size:.85em">Ampliar</a></p>
 
 <div class="bloque bloque-actividad">
   <p class="bloque-titulo">Tarea 4 · Impresión por pantalla</p>
   <p>Crea un archivo por apartado (<code>ejercicio1.py</code>, <code>ejercicio2.py</code>…) y escribe en cada uno el programa que se pide:</p>
   <ol>
-    <li>Muestra cinco números cualesquiera separados por comas usando el ajuste <code>sep</code>.</li>
+    <li>Muestra cinco números cualesquiera separados por una coma y un espacio, usando el ajuste <code>sep</code> en un solo <code>print()</code>.</li>
     <li>Muestra dos palabras en la <strong>misma línea</strong>, pero con <strong>dos</strong> órdenes <code>print()</code> distintas (pista: <code>end</code>).</li>
     <li>Calcula y muestra la media de tres notas: 5, 8 y 9.</li>
     <li>Muestra «Hola mundo» en <strong>dos líneas</strong> con una <strong>sola</strong> orden <code>print()</code> (pista: <code>\n</code>).</li>
   </ol>
-  <p>Entrega el proyecto como <code>tarea4.zip</code> en Google Classroom.</p>
+  <p><strong>Tu programa debe mostrar</strong> (cada archivo su parte; con tus números y tus palabras en el 1 y el 2):</p>
+<pre><code>4, 8, 15, 16, 23
+Hola, mundo
+7.333333333333333
+Hola
+mundo</code></pre>
+  <p><strong>Está bien si…</strong> ☐ el 1 usa <code>sep=", "</code> ☐ el 2 usa dos <code>print()</code> y <code>end</code> ☐ el 4 tiene un solo <code>print()</code>. Entrega el ZIP como <code>tarea4.zip</code> en Google Classroom.</p>
 </div>
 
 <div class="bloque bloque-actividad">
   <p class="bloque-titulo">Tarea 5 · Pidiendo datos</p>
-  <p>Un archivo por apartado. Recuerda convertir con <code>int()</code> o <code>float()</code> lo que pidas con <code>input()</code>:</p>
+  <p>Un archivo por apartado. Convierte con <code>int()</code> o <code>float()</code> <strong>solo los números</strong> que vayas a usar en cuentas:</p>
   <ol>
     <li>Pide <strong>dos números</strong> y muestra la frase «La suma de los dos números es:» seguida del resultado.</li>
-    <li>Pide un <strong>nombre</strong> y muestra un saludo personalizado con ese nombre.</li>
-    <li>Pide la <strong>base</strong> y la <strong>altura</strong> de un rectángulo y muestra su área.</li>
+    <li>Pide un <strong>nombre</strong> y muestra un saludo personalizado con ese nombre (el nombre no se convierte).</li>
+    <li>Pide la <strong>base</strong> y la <strong>altura</strong> de un rectángulo y muestra su área (base por altura). Usa <code>float()</code> para que acepte decimales.</li>
   </ol>
-  <p>Entrega el proyecto como <code>tarea5.zip</code> en Google Classroom.</p>
+  <p><strong>Pruébalo así</strong> (lo que escribe el usuario va después de los dos puntos):</p>
+<pre><code>Primer número: 4
+Segundo número: 6
+La suma de los dos números es: 10
+
+¿Cómo te llamas? Alex
+¡Hola, Alex!
+
+Base: 3
+Altura: 2.5
+El área es: 7.5</code></pre>
+  <p><strong>Está bien si…</strong> ☐ con 4 y 6 sale 10, no 46 ☐ el saludo usa el nombre escrito ☐ con 3 y 2.5 sale 7.5. Entrega el ZIP como <code>tarea5.zip</code> en Google Classroom.</p>
 </div>
 
 </div>
@@ -158,8 +189,8 @@ print(&quot;El año que viene tendrás&quot;, edad + 1)</code></pre>
 </div>
 </article>
 </div></main><div class="nav-buttons">
-<a href="../html/s2-datos-operaciones-y-variables.html" title="Anterior" class="nav-button nav-button-left"><span>Anterior</span></a>
-<a href="../html/s4-condicionales.html" title="Siguiente" class="nav-button nav-button-right"><span>Siguiente</span></a>
+<a href="../html/datos-operaciones-y-variables.html" title="Anterior" class="nav-button nav-button-left"><span>Anterior</span></a>
+<a href="../html/condicionales.html" title="Siguiente" class="nav-button nav-button-right"><span>Siguiente</span></a>
 </div>
 <footer id="siteFooter"><div id="siteFooterContent"> <div id="packageLicense" class=""> <p> <span class="license-label">Licencia: </span><span class="license">creative commons: attribution - share alike</span></p>
 </div>

@@ -4,13 +4,12 @@
 <meta charset="utf-8">
 <meta name="generator" content="eXeLearning v4.0.5">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>S8 · Reto final | Programa en serio: de los bloques al texto con Python</title>
+<title>Reto final | Programa en serio: de los bloques al texto con Python</title>
 <link rel="icon" type="image/x-icon" href="../libs/favicon.ico">
 <meta name="description" content="Unidad de introduccion a la programacion textual con Python para 3.o de ESO (Computacion y Robotica). SdA «Programa en serio: de los bloques al texto con Python».">
 <script>document.querySelector("html").classList.add("js");</script><script src="../libs/jquery/jquery.min.js"> </script><script src="../libs/common_i18n.js"> </script><script src="../libs/common.js"> </script><script src="../libs/exe_export.js"> </script><script src="../libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
 <script src="../idevices/text/text.js"></script><link rel="stylesheet" href="../idevices/text/text.css">
-<link rel="stylesheet" href="../content/css/base.css"><script src="../theme/style.js"> </script>
-<script src="../theme/zzz-majuelo.js"> </script><link rel="stylesheet" href="../theme/style.css"><link rel="stylesheet" href="../theme/zzz-majuelo.css">
+<link rel="stylesheet" href="../content/css/base.css"><script src="../theme/style.js"> </script><script src="../theme/zzz-majuelo.js"> </script><link rel="stylesheet" href="../theme/style.css"><link rel="stylesheet" href="../theme/zzz-majuelo.css">
 </head>
 <body class="exe-export exe-web-site">
 <script>document.body.className+=" js"</script>
@@ -18,30 +17,32 @@
 <ul>
 <li> <a href="../index.html" class="main-node no-ch">Python · Inicio</a>
 </li>
-<li> <a href="../html/s1-de-los-bloques-al-texto.html" class="no-ch">S1 · De los bloques al texto</a>
+<li> <a href="../html/de-los-bloques-al-texto.html" class="no-ch">De los bloques al texto</a>
 </li>
-<li> <a href="../html/s2-datos-operaciones-y-variables.html" class="no-ch">S2 · Datos, operaciones y variables</a>
+<li> <a href="../html/datos-operaciones-y-variables.html" class="no-ch">Datos, operaciones y variables</a>
 </li>
-<li> <a href="../html/s3-entrada-y-salida.html" class="no-ch">S3 · Entrada y salida</a>
+<li> <a href="../html/entrada-y-salida.html" class="no-ch">Entrada y salida</a>
 </li>
-<li> <a href="../html/s4-condicionales.html" class="no-ch">S4 · Condicionales</a>
+<li> <a href="../html/condicionales.html" class="no-ch">Condicionales</a>
 </li>
-<li> <a href="../html/s5-bucles-for.html" class="no-ch">S5 · Bucles for</a>
+<li> <a href="../html/bucles-for.html" class="no-ch">Bucles for</a>
 </li>
-<li> <a href="../html/s6-while-y-anidamiento.html" class="no-ch">S6 · While y anidamiento</a>
+<li> <a href="../html/bucles-while-y-anidamiento.html" class="no-ch">Bucles while y anidamiento</a>
 </li>
-<li> <a href="../html/s7-funciones-y-cadenas.html" class="no-ch">S7 · Funciones y cadenas</a>
+<li> <a href="../html/funciones-y-cadenas.html" class="no-ch">Funciones y cadenas</a>
 </li>
-<li class="active"> <a href="../html/s8-reto-final.html" class="active no-ch">S8 · Reto final</a>
+<li> <a href="../html/programar-sin-internet-thonny.html" class="no-ch">Programar sin internet: Thonny</a>
+</li>
+<li class="active"> <a href="../html/reto-final.html" class="active no-ch">Reto final</a>
 </li>
 <li> <a href="../html/chuleta-de-python.html" class="no-ch">Chuleta de Python</a>
 </li>
 </ul>
 </nav><main id="page-py-08" class="page"> 
-<header class="main-header"> <p class="page-counter"> <span class="page-counter-label">Página </span><span class="page-counter-content"> <strong class="page-counter-current-page">9</strong><span class="page-counter-sep">/</span><strong class="page-counter-total">10</strong></span></p>
+<header class="main-header"> <p class="page-counter"> <span class="page-counter-label">Página </span><span class="page-counter-content"> <strong class="page-counter-current-page">10</strong><span class="page-counter-sep">/</span><strong class="page-counter-total">11</strong></span></p>
 
 <div class="package-header"><p class="package-title">Programa en serio: de los bloques al texto con Python</p></div>
-<div class="page-header"><h1 class="page-title">S8 · Reto final</h1></div>
+<div class="page-header"><h1 class="page-title">Reto final</h1></div>
 </header><div id="page-content-page-py-08" class="page-content">
 <article id="block-py-08" class="box no-header">
 <header class="box-head no-icon">
@@ -75,12 +76,19 @@
   <ol>
     <li>Haz que el programa <strong>salude y se presente</strong> con <code>print()</code>.</li>
     <li>Hazle <strong>al menos 3 preguntas</strong> con <code>input()</code> (por ejemplo: nombre, edad, color favorito). <strong>Guarda cada respuesta en una variable distinta</strong> (<code>nombre</code>, <code>edad</code>, <code>color</code>…).</li>
+    <li>Usa <strong>al menos un <code>if</code></strong> para que el chatbot conteste algo distinto según una respuesta (por ejemplo, según el color).</li>
     <li>Al final, muestra un <strong>resumen</strong> que use todas las variables, uniendo textos con <code>+</code>.</li>
   </ol>
-  <p><strong>Ejemplo de cómo debería terminar:</strong></p>
+  <p><strong>Ejemplo de cómo podría terminar:</strong></p>
   <pre><code>nombre = input(&quot;¿Cómo te llamas? &quot;)
 edad = input(&quot;¿Cuántos años tienes? &quot;)
-print(&quot;Vale, te llamas &quot; + nombre + &quot; y tienes &quot; + edad + &quot; años. ¡Entendido!&quot;)</code></pre>
+color = input(&quot;¿Cuál es tu color favorito? &quot;)
+if color.lower() == &quot;azul&quot;:
+    print(&quot;¡Como el cielo!&quot;)
+else:
+    print(&quot;Buen color, &quot; + nombre + &quot;.&quot;)
+print(&quot;Vale, te llamas &quot; + nombre + &quot;, tienes &quot; + edad + &quot; años y te gusta el &quot; + color + &quot;. ¡Entendido!&quot;)</code></pre>
+  <p>La edad no se convierte con <code>int()</code> porque solo se muestra; si la convirtieras, no podrías unirla con <code>+</code> a un texto.</p>
   <p><strong>Amplía (Nivel Pro):</strong> añade más preguntas y un mensaje final con más personalidad.</p>
 </div>
 
@@ -108,15 +116,18 @@ else:
 
 <div class="bloque bloque-resuelto">
   <p class="bloque-titulo">Misión 3 · Adivina el número secreto</p>
-  <p><strong>Qué hace:</strong> el ordenador piensa un número y tú tienes que adivinarlo; el programa te dice si te pasas o te quedas corto, hasta que aciertas.</p>
+  <p><strong>Qué hace:</strong> el ordenador piensa un número y tú tienes que adivinarlo; el programa te dice si te pasas o te quedas corto, hasta que aciertas o se te acaban los intentos.</p>
+  <p><strong>Ojo:</strong> los pasos 1 a 4 son la Tarea 8. Por eso, en esta misión <strong>los pasos 5 y 6 son obligatorios</strong>: sin ellos, el reto está incompleto.</p>
   <p><strong>Pasos:</strong></p>
   <ol>
     <li><code>import random</code> y genera un número secreto del 1 al 50 con <code>random.randint(1, 50)</code>. Guárdalo en una variable.</li>
     <li>Abre un bucle <code>while True:</code>.</li>
     <li>Dentro: pide un número con <code>input()</code> y conviértelo con <code>int()</code>.</li>
     <li>Compara con <code>if</code>/<code>elif</code>/<code>else</code>: si es menor, «demasiado bajo»; si es mayor, «demasiado alto»; si acierta, felicítalo y usa <code>break</code> para salir.</li>
+    <li><strong>Contador:</strong> crea <code>intentos = 0</code> antes del bucle, súmale 1 en cada vuelta y, al acertar, muestra cuántos intentos ha necesitado.</li>
+    <li><strong>Límite:</strong> si llega a 7 intentos sin acertar, el jugador pierde: muestra el número secreto y sal del bucle con <code>break</code>.</li>
   </ol>
-  <p><strong>Amplía (Nivel Pro):</strong> crea una variable <code>intentos = 0</code> antes del bucle, súmale 1 en cada vuelta y, al acertar, muestra cuántos intentos ha necesitado.</p>
+  <p><strong>Amplía (Nivel Pro):</strong> al terminar la partida, pregunta si quiere jugar otra vez y, si dice que sí, empieza otra con un número nuevo.</p>
 </div>
 
 <div class="bloque bloque-resuelto">
@@ -138,33 +149,41 @@ elif (jugador == &quot;piedra&quot; and cpu == &quot;tijera&quot;) or \
     print(&quot;¡Ganas tú!&quot;)
 else:
     print(&quot;¡Gana la máquina!&quot;)</code></pre>
+  <p>La barra <code>\</code> al final de una línea le dice a Python que la orden sigue en la línea de abajo (es la tecla de la izquierda del <kbd>1</kbd> con <kbd>AltGr</kbd>). <code>random.choice(opciones)</code> elige al azar uno de los elementos de la lista.</p>
   <p><strong>Amplía (Nivel Pro):</strong> mete el juego en un <code>while True</code> con un marcador de puntos y pregunta al final de cada ronda si quiere «jugar otra vez».</p>
 </div>
 
-<h2>Qué se valora (niveles de logro)</h2>
+<h2>Qué miramos al corregir</h2>
 <table class="tabla-datos">
-  <thead><tr><th>Nivel</th><th>Tu programa…</th></tr></thead>
+  <thead><tr><th>Qué se mira</th><th>Un reto de la nota más alta…</th><th>Peso</th></tr></thead>
   <tbody>
-    <tr><td>Mínimo</td><td>Funciona sin errores y cumple los pasos básicos de la misión (usa variables, entrada/salida y al menos una estructura de control).</td></tr>
-    <tr><td>Bien</td><td>Además, combina condicionales y bucles, y tiene comentarios que explican el código.</td></tr>
-    <tr><td>Excelente</td><td>Añade la <strong>ampliación (Nivel Pro)</strong> y el código está ordenado y con nombres claros.</td></tr>
+    <tr><td>Que la misión funcione</td><td>Hace todos los pasos de su misión y funciona de principio a fin con tus tres pruebas, una de ellas un caso raro (una respuesta inesperada, un empate, un número fuera de rango).</td><td>35 %</td></tr>
+    <tr><td>Decisiones y bucles</td><td>Los <code>if</code> (y el <code>while</code>, si tu misión lo lleva) funcionan en todos los casos y no hay bucles infinitos.</td><td>30 %</td></tr>
+    <tr><td>Datos, preguntas y mensajes</td><td>Pregunta lo que necesita, convierte con <code>int()</code> solo los números, y los mensajes se entienden.</td><td>20 %</td></tr>
+    <tr><td>Código claro y probado</td><td>Empieza con el comentario de la misión, usa nombres claros y termina con el comentario de pruebas. Para la nota más alta en esta fila, añade además el nivel Pro o una mejora tuya, sin romper lo básico.</td><td>15 %</td></tr>
   </tbody>
 </table>
+<p>Lo tienes también en la hoja <a href="../content/resources/que_miramos_python.pdf" target="_blank" rel="noopener">Qué miramos al corregir (PDF)</a>, junto con lo que se mira en las tareas.</p>
 
 <div class="bloque bloque-actividad">
   <p class="bloque-titulo">Entrega del reto final</p>
   <ol>
     <li>Empieza tu programa con un <strong>comentario</strong> que diga qué misión has elegido y qué hace.</li>
-    <li>Pruébalo bien: que funcione de principio a fin.</li>
-    <li>Descarga el archivo como <code>reto_final.py</code> y súbelo a la tarea de Google Classroom.</li>
+    <li>Pruébalo con <strong>tres entradas distintas</strong>, una de ellas rara, y apúntalas al final en un <strong>comentario de pruebas</strong>. Por ejemplo, en la misión 2:
+<pre><code># PRUEBAS
+# 1) Escribí: roja  -&gt; Salió: ¡Fuego! Vuelve a intentarlo.
+# 2) Escribí: AZUL  -&gt; Salió: Encuentras un tesoro. ¡Ganas!
+# 3) Escribí: verde -&gt; Salió: Esa puerta no existe...  (respuesta inesperada)</code></pre></li>
+    <li>Guárdalo como <code>reto_final.py</code> y súbelo a la tarea de Google Classroom. Si no lo terminas en clase, sube lo que lleves y sigue después.</li>
   </ol>
 </div>
+
 
 </div>
 </div>
 </article>
 </div></main><div class="nav-buttons">
-<a href="../html/s7-funciones-y-cadenas.html" title="Anterior" class="nav-button nav-button-left"><span>Anterior</span></a>
+<a href="../html/programar-sin-internet-thonny.html" title="Anterior" class="nav-button nav-button-left"><span>Anterior</span></a>
 <a href="../html/chuleta-de-python.html" title="Siguiente" class="nav-button nav-button-right"><span>Siguiente</span></a>
 </div>
 <footer id="siteFooter"><div id="siteFooterContent"> <div id="packageLicense" class=""> <p> <span class="license-label">Licencia: </span><span class="license">creative commons: attribution - share alike</span></p>
