@@ -100,8 +100,7 @@ button:focus-visible,select:focus-visible{outline:3px solid var(--chrome-osc);ou
       s.push({l:k[0],v:v,o:o.slice(),c:[],m:'¿'+num(n)+' &lt; '+k[1]+'? → <b>'+(ok?'True':'False')+'</b>. '+(ok?'Se cumple: entra en esta rama.':'No se cumple: salta a la siguiente condición.')});
       if(ok){ o.push(k[3]); s.push({l:k[2],v:v,o:o.slice(),c:[],m:'Muestra <b>'+k[3]+'</b>. Las demás ramas ya no se miran: en un <code>if/elif/else</code> solo se ejecuta <b>una</b>.'}); return {codigo:c,pasos:s}; }
     }
-    s.push({l:10,v:v,o:o.slice(),c:[],m:'Ninguna condición se ha cumplido, así que entra en el <code>else</code>.'});
-    o.push('Sobresaliente'); s.push({l:11,v:v,o:o.slice(),c:[],m:'Muestra <b>Sobresaliente</b>.'});
+    o.push('Sobresaliente'); s.push({l:11,v:v,o:o.slice(),c:[],m:'Ninguna condición se ha cumplido, así que se ejecuta lo que hay dentro del <code>else</code>: muestra <b>Sobresaliente</b>.'});
     return {codigo:c,pasos:s};
   }};
   P['for']={titulo:'Bucle for',entrada:{et:'Programa',ops:['range(1, 6)','sumar del 1 al 5','bucles anidados']},gen:function(e){
@@ -130,12 +129,13 @@ button:focus-visible,select:focus-visible{outline:3px solid var(--chrome-osc);ou
     var c2=['for fila in range(1, 4):','    for asterisco in range(fila):','        print("*", end="")','    print()'];
     var linea='';
     for(var f=1;f<4;f++){
-      s.push({l:1,v:{fila:f},o:o.concat(linea?[linea]:[]),c:['fila'],m:'Bucle de fuera: <b>fila</b> vale <b>'+f+'</b>. Ahora el de dentro se repetirá '+f+' '+(f===1?'vez':'veces')+'.'});
+      s.push({l:1,v:(f===1?{fila:f}:{fila:f,asterisco:f-2}),o:o.concat(linea?[linea]:[]),c:['fila'],m:'Bucle de fuera: <b>fila</b> vale <b>'+f+'</b>. Ahora el de dentro se repetirá '+f+' '+(f===1?'vez':'veces')+'.'});
       for(var a=0;a<f;a++){
         var vv={fila:f,asterisco:a};
         s.push({l:2,v:vv,o:o.concat(linea?[linea]:[]),c:['asterisco'],m:'Bucle de dentro: <code>range('+f+')</code> da '+(f===1?'solo el 0':'0 … '+(f-1))+'. <b>asterisco</b> vale <b>'+a+'</b>.'});
         linea+='*'; s.push({l:3,v:vv,o:o.concat([linea]),c:[],m:'Pinta un <b>*</b>. <code>end=""</code> hace que no salte de línea.'});
       }
+      s.push({l:2,v:{fila:f,asterisco:f-1},o:o.concat([linea]),c:[],m:'<code>range('+f+')</code> ya no da más números: el bucle de dentro termina.'});
       o.push(linea); linea='';
       s.push({l:4,v:{fila:f,asterisco:f-1},o:o.slice(),c:[],m:'El de dentro ha terminado: <code>print()</code> salta de línea.'});
     }
