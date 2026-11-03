@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es" id="exe-page-py-10">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="eXeLearning v4.0.6">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="exe-pass-score" content="5">
+<title>La prueba práctica en el aula | Programa en serio: de los bloques al texto con Python</title>
+<link rel="icon" type="image/x-icon" href="../libs/favicon.ico">
+<meta name="description" content="Unidad de introduccion a la programacion textual con Python para 3.o de ESO (Computacion y Robotica). SdA «Programa en serio: de los bloques al texto con Python».">
+<script>document.querySelector("html").classList.add("js");</script><script src="../libs/jquery/jquery.min.js"> </script><script src="../libs/common_i18n.js"> </script><script src="../libs/common.js"> </script><script src="../libs/exe_export.js"> </script><script src="../libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+<script src="../idevices/text/text.js"></script><link rel="stylesheet" href="../idevices/text/text.css">
+<link rel="stylesheet" href="../content/css/base.css"><script src="../theme/style.js"> </script><script src="../theme/zzz-majuelo.js"> </script><link rel="stylesheet" href="../theme/style.css"><link rel="stylesheet" href="../theme/zzz-majuelo.css">
+</head>
+<body class="exe-export exe-web-site">
+<script>document.body.className+=" js"</script>
+<div class="exe-content exe-export pre-js siteNav-hidden"><a href="#page-py-10" id="skipNav">Skip to content</a> <nav id="siteNav">
+<ul>
+<li> <a href="../index.html" class="main-node no-ch">Python · Inicio</a>
+</li>
+<li> <a href="../html/de-los-bloques-al-texto.html" class="no-ch">De los bloques al texto</a>
+</li>
+<li> <a href="../html/datos-operaciones-y-variables.html" class="no-ch">Datos, operaciones y variables</a>
+</li>
+<li> <a href="../html/entrada-y-salida.html" class="no-ch">Entrada y salida</a>
+</li>
+<li> <a href="../html/condicionales.html" class="no-ch">Condicionales</a>
+</li>
+<li> <a href="../html/bucles-for.html" class="no-ch">Bucles for</a>
+</li>
+<li> <a href="../html/bucles-while-y-anidamiento.html" class="no-ch">Bucles while y anidamiento</a>
+</li>
+<li> <a href="../html/funciones-y-cadenas.html" class="no-ch">Funciones y cadenas</a>
+</li>
+<li class="active"> <a href="../html/la-prueba-practica-en-el-aula.html" class="active no-ch">La prueba práctica en el aula</a>
+</li>
+<li> <a href="../html/reto-final.html" class="no-ch">Reto final</a>
+</li>
+<li> <a href="../html/chuleta-de-python.html" class="no-ch">Chuleta de Python</a>
+</li>
+</ul>
+</nav><main id="page-py-10" class="page"> 
+<header class="main-header"> <p class="page-counter"> <span class="page-counter-label">Página </span><span class="page-counter-content"> <strong class="page-counter-current-page">9</strong><span class="page-counter-sep">/</span><strong class="page-counter-total">11</strong></span></p>
+
+<div class="package-header"><p class="package-title">Programa en serio: de los bloques al texto con Python</p></div>
+<div class="page-header"><h1 class="page-title">La prueba práctica en el aula</h1></div>
+</header><div id="page-content-page-py-10" class="page-content">
+<article id="block-py-10" class="box no-header">
+<header class="box-head no-icon">
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idev-py-10" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json" data-idevice-json-data="{&quot;ideviceId&quot;:&quot;idev-py-10&quot;}">
+<style>.exe-content{--chrome:#3b3a7a;--chrome-osc:#2a295a;--chrome-tinte:#ecebf5;--chrome-linea:#d0cfe6;}</style>
+<div class="bloque bloque-teoria">
+  <p class="bloque-titulo">Un editor solo para la prueba</p>
+  <p>La <strong>prueba práctica</strong> se hace en el aula y, mientras dura el examen, no puedes tener internet. Por eso, solo para la prueba, usaremos <a href="https://www.online-python.com/pyodide" target="_blank" rel="noopener"><strong>online-python.com/pyodide</strong></a>, una versión del editor de siempre. Se abre con internet y, una vez preparada, sigue funcionando sin conexión. Tiene los mismos botones y la misma TERMINAL.</p>
+</div>
+
+<h2>Prepara el editor</h2>
+<p>Abre <a href="https://www.online-python.com/pyodide" target="_blank" rel="noopener">online-python.com/pyodide</a>, escribe <code>print("listo")</code> y pulsa <strong>Run</strong>. La primera vez tarda un poco, porque el navegador está cargando Python.</p>
+<p style="text-align:center"><img src="../content/resources/py_pyo_listo.png" alt="Editor online-python.com/pyodide con print(&quot;listo&quot;). Abajo a la derecha pone Python 3.12.7 (Pyodide 0.27.5), debajo está el botón verde Run y en la TERMINAL sale la palabra listo." style="max-width:760px;width:100%;height:auto"><a class="ampliar-fig" href="../content/resources/py_pyo_listo.png" target="_blank" rel="noopener" style="display:block;width:max-content;margin:.25rem auto .75rem;font-size:.85em">Ampliar</a></p>
+<ol>
+  <li><strong>Pyodide</strong>: abajo, a la derecha del editor, tiene que poner <code>Pyodide</code>. Si no lo pone, estás en el editor de siempre, que sin internet no funciona.</li>
+  <li><strong>Run</strong>: ejecuta el programa de la pestaña que tienes abierta, como siempre.</li>
+  <li><strong>TERMINAL</strong>: cuando sale <code>listo</code>, el editor ya está preparado. En la prueba, cortaré internet en ese momento.</li>
+</ol>
+<div class="bloque bloque-nota">
+  <p class="bloque-titulo">No recargues la página</p>
+  <p>Sin internet, la página <strong>no vuelve a cargar</strong>. No la recargues ni cierres la pestaña. Si el navegador te pregunta si quieres salir, elige quedarte. Si te quedas sin editor, avísame: tus ejercicios no se pierden y vuelven a aparecer cuando regresa internet.</p>
+</div>
+
+<h2>Un ejercicio en cada pestaña</h2>
+<p>Igual que en las tareas, cada ejercicio va en su pestaña.</p>
+<p style="text-align:center"><img src="../content/resources/py_pyo_stop.png" alt="Editor con cuatro pestañas, de ejercicio1.py a ejercicio4.py, el botón + a su derecha y un programa en marcha con el botón rojo Stop." style="max-width:760px;width:100%;height:auto"><a class="ampliar-fig" href="../content/resources/py_pyo_stop.png" target="_blank" rel="noopener" style="display:block;width:max-content;margin:.25rem auto .75rem;font-size:.85em">Ampliar</a></p>
+<ol>
+  <li><strong>Las pestañas</strong>: haz doble clic en <code>main.py</code> y cámbiale el nombre por <code>ejercicio1.py</code>.</li>
+  <li><strong>El botón +</strong>: crea la pestaña siguiente. Escribe su nombre y pulsa <kbd>Enter</kbd>: <code>ejercicio2.py</code>, <code>ejercicio3.py</code> y <code>ejercicio4.py</code>.</li>
+  <li><strong>Stop</strong>: mientras un programa está en marcha, el botón Run se convierte en Stop. Si tu programa no termina, por ejemplo por un bucle infinito, púlsalo. Aquí no hay que recargar la página.</li>
+</ol>
+<p>Mientras trabajas no hace falta descargar nada: tus pestañas se quedan en el editor.</p>
+
+<h2>Entrega al terminar</h2>
+<p>Cuando te avise, ya con internet, pulsa el <strong>disquete</strong> de arriba:</p>
+<p style="text-align:center"><img src="../content/resources/py_pyo_zip.png" alt="Ventana Save Code con All files as a ZIP marcado, el nombre prueba, los cuatro archivos de la lista y el botón Download prueba.zip." style="max-width:520px;width:100%;height:auto"><a class="ampliar-fig" href="../content/resources/py_pyo_zip.png" target="_blank" rel="noopener" style="display:block;width:max-content;margin:.25rem auto .75rem;font-size:.85em">Ampliar</a></p>
+<ol>
+  <li>Marca <strong>All files as a ZIP</strong>.</li>
+  <li>Escribe el nombre: <code>prueba</code> (el <code>.zip</code> lo añade solo).</li>
+  <li>Comprueba que están los cuatro archivos.</li>
+  <li>Pulsa <strong>Download</strong> y sube <code>prueba.zip</code> a su tarea de Google Classroom.</li>
+</ol>
+<p>Sin internet, el ZIP no se descarga. Si pulsas Download y no pasa nada, espera a que vuelva la conexión y pulsa otra vez.</p>
+<div class="bloque bloque-nota">
+  <p class="bloque-titulo">No apagues ni reinicies el ordenador</p>
+  <p>Los ordenadores del aula <strong>borran todo lo guardado cada vez que se reinician</strong>. Hasta que hayas entregado tu ZIP, no apagues el ordenador, no lo reinicies y no cierres la sesión.</p>
+</div>
+
+<h2>Lo que cambia respecto al editor de siempre</h2>
+<table class="tabla-datos">
+  <thead><tr><th></th><th>Editor de siempre</th><th>Editor de la prueba</th></tr></thead>
+  <tbody>
+    <tr><td>Dirección</td><td>online-python.com</td><td>online-python.com/pyodide</td></tr>
+    <tr><td>Botones y TERMINAL</td><td>Run, disquete y TERMINAL</td><td>Los mismos</td></tr>
+    <tr><td>Un programa que no termina</td><td>Recargar la página</td><td>Botón rojo <strong>Stop</strong></td></tr>
+    <tr><td>Internet</td><td>Hace falta todo el tiempo</td><td>Solo para abrirlo al empezar y para entregar</td></tr>
+  </tbody>
+</table>
+<p>Los mensajes de error son los mismos. Solo cambian dos detalles: donde iría el nombre del archivo pone <code>&lt;exec&gt;</code>, y a veces no salen las flechitas <code>^</code>. Busca el <strong>número de línea</strong> y lee la <strong>última línea</strong>, como siempre.</p>
+
+<h2>Cómo es la prueba práctica</h2>
+<div class="bloque bloque-formula">
+  <p class="bloque-titulo">Antes de empezar, que no te pille de sorpresa</p>
+  <ul>
+    <li>Son <strong>cuatro ejercicios cortos</strong>, de lo que has practicado en las tareas: pedir datos y hacer cuentas, un <code>if</code>, un <code>for</code> y un <code>while</code> que va sumando.</li>
+    <li>Puedes tener delante la <strong>Chuleta de Python impresa</strong>, y nada más.</li>
+    <li>Cada ejercicio va en su pestaña: <code>ejercicio1.py</code>, <code>ejercicio2.py</code>, <code>ejercicio3.py</code> y <code>ejercicio4.py</code>. Se entregan juntos en <code>prueba.zip</code>.</li>
+    <li>Un ejercicio que no funciona del todo también puntúa si la idea está bien: entrega siempre lo que tengas.</li>
+  </ul>
+  <p>Para practicar tienes un <a href="../content/resources/ensayo_prueba_python.pdf" target="_blank" rel="noopener">ensayo de la prueba (PDF)</a> con cuatro ejercicios del mismo tipo (un <code>if</code>, un <code>for</code> y un <code>while</code> que va sumando, entre ellos) y sus soluciones al final. Intenta cada uno antes de mirar la solución.</p>
+</div>
+
+</div>
+</div>
+</article>
+</div></main><div class="nav-buttons">
+<a href="../html/funciones-y-cadenas.html" title="Anterior" class="nav-button nav-button-left"><span>Anterior</span></a>
+<a href="../html/reto-final.html" title="Siguiente" class="nav-button nav-button-right"><span>Siguiente</span></a>
+</div>
+<footer id="siteFooter"><div id="siteFooterContent"> <div id="packageLicense" class=""> <p> <span class="license-label">Licencia: </span><span class="license">creative commons: attribution - share alike</span></p>
+</div>
+</div></footer>
+</div>
+<p id="made-with-eXe"> <a href="https://exelearning.net/" target="_blank" rel="noopener"> <span>Creado con eXeLearning <span>(Ventana nueva)</span></span></a></p>
+</body>
+</html>
